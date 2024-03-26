@@ -28,6 +28,28 @@ acf_add_local_field_group(array(
 			'acfe_field_group_condition' => 0,
 		),
 		array(
+			'key' => 'field_6602a680b4582',
+			'label' => 'Текст в подвале сайта',
+			'name' => 'footer_text',
+			'aria-label' => '',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'acfe_textarea_code' => 0,
+			'maxlength' => '',
+			'rows' => 4,
+			'placeholder' => '',
+			'new_lines' => '',
+			'acfe_field_group_condition' => 0,
+		),
+		array(
 			'key' => 'field_6601418834e5f',
 			'label' => 'Соцсети',
 			'name' => 'socials',
@@ -137,7 +159,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1711358483,
+	'modified' => 1711449773,
 ));
 
 endif;
