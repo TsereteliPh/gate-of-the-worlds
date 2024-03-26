@@ -1,0 +1,51 @@
+.btn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 190px;
+	min-height: 55px;
+	padding: 10px 30px;
+	overflow: hidden;
+	color: var(--fc-light);
+	font-weight: 600;
+	font-size: 16px;
+	font-family: var(--font-primary);
+	text-decoration: none;
+	background: var(--btn-gradient) no-repeat left center / 200% auto;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: var(--transition);
+
+	@include touch {
+		box-shadow: 0 3px var(--primary);
+	}
+
+	@include mouse {
+
+		&:hover {
+			background-position: right center;
+			box-shadow: 0 3px var(--primary);
+			transform: translateY(-3px);
+		}
+
+		&:active {
+			box-shadow: none;
+			transform: none;
+			opacity: 0.9;
+		}
+	}
+
+	&::before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 150px;
+		height: 150px;
+		background: url(assets/images/logo-main.png) no-repeat 50% / contain;
+		transform: translate(-50%, -55%);
+		opacity: 0.15;
+		content: "";
+	}
+}

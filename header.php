@@ -11,7 +11,36 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
+<?php
+	$tel = get_field( 'tel', 'options' );
+	$socials = get_field( 'socials', 'options' );
+?>
 <header class="header">
+	<div class="container--large header__container">
+		<button class="header__burger" type="button" aria-label="Открыть/Закрыть меню">
+			<span></span>
+		</button>
 
+		<a href="<?php echo bloginfo( 'url' ); ?>" class="header__logo" aria-label="Логотип компании Врата Миров"></a>
+
+		<?php if ( $tel ) : ?>
+			<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="header__phone">
+				<svg width="18" height="18"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-phone"></use></svg>
+				<?php echo $tel; ?>
+			</a>
+		<?php endif; ?>
+
+		<?php if ( $socials ) : ?>
+			<div class="socials header__socials">
+				<?php foreach ( $socials as $social ) : ?>
+					<a href="<?php echo $social['link']; ?>" class="socials__link" target="_blank">
+						<svg width="13" height="13"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-<?php echo $social['type']; ?>"></use></svg>
+					</a>
+				<?php endforeach; ?>
+			</div>
+		<?php endif; ?>
+
+		<button class="btn header__callback" type="button">Заказать звонок</button>
+	</div>
 </header>
 <main class="main">

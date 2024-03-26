@@ -1,0 +1,188 @@
+.header {
+	padding-top: clamp(1.667rem, -5rem + 8.333vw, 3.889rem);
+
+	@include hg {
+		padding-top: 30px;
+	}
+
+	@include lg {
+		padding-top: 20px;
+	}
+
+	// @include xs {
+	// 	padding: 20px 0;
+	// }
+
+	&__container {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+
+		@include xs {
+			justify-content: space-between;
+		}
+
+		&::before {
+			display: block;
+			flex: 1 0;
+			height: 1px;
+			background-color: var(--fc-light);
+			content: "";
+
+			@include xs {
+				display: none;
+			}
+		}
+	}
+
+	&__burger {
+		display: none;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		height: 25px;
+		padding: 0;
+		overflow: hidden;
+		background: none;
+		border: none;
+
+		@include xs {
+			display: flex;
+		}
+
+		&.active {
+
+			span {
+				background: transparent;
+				transition-delay: 0.25s;
+				transition-duration: 0.1s;
+
+				&::before,
+				&::after {
+					top: 0;
+					width: 100%;
+					transform: rotateZ(-45deg);
+					transition: top 0.4s, transform 0.25s 0.25s;
+				}
+
+				&::before {
+					transform: rotateZ(45deg);
+				}
+			}
+		}
+
+		span {
+			position: relative;
+			display: block;
+			width: 35px;
+			height: 4px;
+			background: var(--main-gradient);
+			border-radius: 2px;
+			transition-delay: 0.25s;
+			transition-duration: 0.25s;
+			pointer-events: none;
+
+			&::before,
+			&::after {
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 4px;
+				background: var(--main-gradient);
+				border-radius: 2px;
+				content: "";
+			}
+
+			&::before {
+				top: -10px;
+				transition: width 0.25s, transform 0.25s, top 0.25s 0.25s;
+				transition-duration: 0.25s;
+			}
+
+			&::after {
+				top: 10px;
+				transition: width 0.25s, transform 0.25s, top 0.25s .25s;
+				transition-duration: 0.25s;
+			}
+		}
+	}
+
+	&__logo {
+		display: block;
+		order: -1;
+		width: 365px;
+		height: auto;
+		aspect-ratio: 1400/288;
+		background: url(assets/images/logo-horizontal.png) no-repeat 50% / contain;
+		transition: var(--transition);
+
+		@include hg {
+			width: 300px;
+		}
+
+		@include md {
+			width: 270px;
+		}
+
+		@include xs {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: clamp(7.778rem, -2.407rem + 50.926vw, 13.889rem);
+			transform: translate(-50%, -50%);
+		}
+
+		@include mouse {
+
+			&:hover {
+				scale: 1.02;
+			}
+		}
+	}
+
+	&__phone {
+		font-weight: 600;
+		font-size: 24px;
+		@include ui-link(var(--secondary));
+
+		@include md {
+			display: none;
+		}
+
+		@include sm {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			order: 1;
+			width: 40px;
+			height: 40px;
+			color: transparent;
+			font-size: 0;
+			background: var(--main-gradient);
+			border-radius: 50%;
+		}
+
+		svg {
+			display: none;
+
+			@include sm {
+				display: block;
+				color: var(--fc-light);
+			}
+		}
+	}
+
+	&__socials {
+
+		@include xs {
+			display: none;
+		}
+	}
+
+	&__callback {
+
+		@include sm {
+			display: none;
+		}
+	}
+}

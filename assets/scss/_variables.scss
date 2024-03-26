@@ -14,6 +14,10 @@
 
 	--bg-primary: #fff;
 
+	//GRADIENTS
+	--main-gradient: linear-gradient(90deg, var(--tertiary) 0%, #2bcc67 100%);
+	--btn-gradient: linear-gradient(90deg, var(--tertiary) 0%, #2bcc67 50%, var(--tertiary) 100%);
+
 	//Transition
 	--transition: all 0.3s ease;
 
