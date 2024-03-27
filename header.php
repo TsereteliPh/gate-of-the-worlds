@@ -40,7 +40,7 @@
 			</div>
 		<?php endif; ?>
 
-		<button class="btn header__callback" type="button">Заказать звонок</button>
+		<button class="btn header__callback" type="button" data-fancybox data-src="#callback">Заказать звонок</button>
 	</div>
 </header>
 <main class="main">

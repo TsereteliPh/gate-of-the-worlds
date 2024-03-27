@@ -7,13 +7,17 @@
 	font-size: 14px;
 	font-family: var(--font-tertiary);
 	background: var(--bg-primary);
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 	border-radius: 10px;
 	transition: var(--transition);
 
+	@include xs {
+		border-width: 1px;
+	}
+
 	&:hover,
 	&:focus {
-		border-color: var(--fc-dark);
+		border-color: var(--tertiary);
 	}
 
 	&::placeholder {

@@ -243,14 +243,17 @@ try {
 	Fancybox.bind('[data-fancybox]', {
 		animated: false,
 	});
-
-	Fancybox.bind('[data-src="#order-calc"]', {
-		defaultDisplay: 'block',
-		dragToClose: false,
-	});
 } catch (error) {
 	console.log(error);
 }
+
+const closeBtns = document.querySelectorAll('.modal__close');
+
+closeBtns.forEach(btn => {
+	btn.onclick = () => {
+		Fancybox.close();
+	}
+});
 
 //Swiper
 

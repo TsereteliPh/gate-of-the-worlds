@@ -54,7 +54,7 @@
 				<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="footer__phone"><?php echo $tel; ?></a>
 			<?php endif; ?>
 
-			<button class="btn footer__callback" type="button">Заказать звонок</button>
+			<button class="btn footer__callback" type="button" data-fancybox data-src="#callback">Заказать звонок</button>
 
 			<a href="<?php echo get_privacy_policy_url(); ?>" class="footer__policy">Политика конфиденциальности</a>
 		</div>
