@@ -59,6 +59,10 @@
 			<span class="checkbox__text">Даю согласие на обработку моих персональных данных в соответствии с <a href="<?php echo get_privacy_policy_url(); ?>">Политикой Конфиденциальности</a></span>
 		</label>
 
+		<input type="text" class="hidden" name="page_request" value="<?php echo is_archive() ? get_the_archive_title() : get_the_title(); ?>">
+
+		<?php wp_nonce_field( 'Заявка', 'modal_callback_nonce' ); ?>
+
 		<button class="btn modal__submit" type="submit">Оставить заявку</button>
 	</form>
 

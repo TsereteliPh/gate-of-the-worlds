@@ -28,6 +28,10 @@
 				<span class="checkbox__text">Даю согласие на обработку моих персональных данных в соответствии с <a href="<?php echo get_privacy_policy_url(); ?>">Политикой Конфиденциальности</a></span>
 			</label>
 
+			<input type="text" class="hidden" name="page_request" value="<?php echo is_archive() ? get_the_archive_title() : get_the_title(); ?>">
+
+			<?php wp_nonce_field( 'Консультация', 'footer_advice_nonce' ); ?>
+
 			<button class="btn footer__submit" type="submit">Получить консультацию</button>
 		</form>
 	</div>
