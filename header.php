@@ -43,4 +43,6 @@
 		<button class="btn header__callback" type="button" data-fancybox data-src="#callback">Заказать звонок</button>
 	</div>
 </header>
+
 <main class="main">
+	<?php if ( is_front_page() ) get_template_part('layouts/partials/welcome'); ?>

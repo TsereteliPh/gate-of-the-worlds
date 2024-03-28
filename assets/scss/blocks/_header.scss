@@ -1,4 +1,10 @@
 .header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: var(--ui-index-4);
+	width: 100%;
+	height: fit-content;
 	padding-top: clamp(1.667rem, -5rem + 8.333vw, 3.889rem);
 
 	@include hg {
