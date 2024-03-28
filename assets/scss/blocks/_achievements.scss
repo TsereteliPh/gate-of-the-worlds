@@ -1,0 +1,158 @@
+.achievements {
+	position: relative;
+	padding: 90px 0;
+	color: var(--fc-light);
+	background: #000 url(assets/images/achievements-bg.jpg) no-repeat 50% / cover;
+
+	@include hg {
+		padding: 60px 0;
+	}
+
+	&::before,
+	&::after {
+		position: absolute;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		content: "";
+	}
+
+	&::before {
+		left: 0;
+		background: linear-gradient(to right, #000 0, rgba(#000, 0.9) 40%, rgba(#000, 0) 100%);
+
+		@include xs {
+			width: 100%;
+			background: rgba(#003a2c, 0.7);
+		}
+	}
+
+	&::after {
+		right: 0;
+		background: linear-gradient(to left, #000 0, rgba(#000, 0.9) 40%, rgba(#000, 0) 100%);
+
+		@include xs {
+			display: none;
+		}
+	}
+
+	&__container {
+		z-index: var(--ui-index-1);
+	}
+
+	&__title {
+		max-width: 640px;
+	}
+
+	&__text-holder {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+		align-items: center;
+		margin-top: 85px;
+
+		@include hg {
+			margin-top: 60px;
+		}
+
+		@include sm {
+			display: flex;
+			flex-direction: column;
+		}
+
+		@include xs {
+			margin-top: 30px;
+		}
+	}
+
+	&__text,
+	&__extra-text {
+		max-width: 400px;
+		line-height: 1.4;
+
+		@include sm {
+			max-width: none;
+		}
+
+		@include xs {
+			font-size: 16px;
+		}
+	}
+
+	&__extra-text {
+		justify-self: flex-end;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 25px 60px;
+		align-items: center;
+		margin-top: 145px;
+
+		@include hg {
+			margin-top: 100px;
+		}
+
+		@include xs {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			align-items: flex-start;
+			max-width: 320px;
+			margin: 40px auto 0;
+		}
+	}
+
+	&__item {
+		display: flex;
+		gap: 15px;
+		align-items: center;
+
+		&:nth-child(2) {
+			justify-self: end;
+		}
+
+		&:nth-child(3),
+		&:nth-child(4) {
+			justify-self: center;
+		}
+
+		&:nth-child(5) {
+			justify-self: end;
+		}
+
+		&:nth-child(odd) {
+
+			@include sm {
+				justify-self: flex-start;
+			}
+		}
+
+		&:nth-child(even) {
+
+			@include sm {
+				justify-self: flex-start;
+			}
+		}
+	}
+
+	&__number {
+		font-weight: 700;
+		font-size: 60px;
+		font-family: var(--font-secondary);
+
+		@include hg {
+			font-size: 45px;
+		}
+	}
+
+	&__desc {
+		max-width: 180px;
+		font-weight: 600;
+
+		@include hg {
+			font-size: 16px;
+		}
+	}
+}
