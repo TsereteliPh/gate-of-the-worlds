@@ -155,7 +155,7 @@ acf_add_local_field_group(array(
 			'layout' => 'table',
 			'pagination' => 0,
 			'min' => 0,
-			'max' => 0,
+			'max' => 6,
 			'collapsed' => '',
 			'button_label' => 'Добавить достижение',
 			'acfe_field_group_condition' => 0,
@@ -233,7 +233,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1711620662,
+	'modified' => 1711636285,
 ));
 
 endif;

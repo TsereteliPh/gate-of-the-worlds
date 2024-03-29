@@ -261,34 +261,12 @@ closeBtns.forEach(btn => {
 
 //Слайдер blocks/rest
 
-const clientsCarousel = document.querySelector('.clients__container');
+const speakerCarousel = document.querySelector('.leading-speaker__videos');
 
-if (clientsCarousel) {
-	let clientsSwiper = new Swiper(clientsCarousel, {
+if (speakerCarousel && window.innerWidth <= 768) {
+	let speakerSwiper = new Swiper(speakerCarousel, {
 		slidesPerView: 'auto',
-		centeredSlides: true,
-		spaceBetween: 25,
-		navigation: {
-			nextEl: '.slider-panel__next',
-			prevEl: '.slider-panel__prev',
-		},
-		breakpoints: {
-			1440: {
-				slidesPerView: 4,
-				centeredSlides: false,
-			},
-			992: {
-				slidesPerView: 3,
-				centeredSlides: false,
-			},
-			769: {
-				slidesPerView: 2,
-				centeredSlides: false,
-			},
-			577: {
-				centeredSlides: false,
-			},
-		}
+		spaceBetween: 15,
 	});
 }
 

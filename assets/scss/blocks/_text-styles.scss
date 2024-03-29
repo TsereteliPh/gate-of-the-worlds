@@ -1,0 +1,33 @@
+.st-callout {
+	display: flex;
+	gap: 25px;
+	align-items: center;
+	padding: 15px 30px 20px;
+	background: var(--bg-primary);
+	border-radius: 10px;
+	box-shadow: 0 0 20px 0 rgba(#000, 0.1);
+
+	@include xs {
+		flex-direction: column;
+		gap: 15px;
+		align-items: flex-start;
+		padding: 20px;
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		width: 60px;
+		height: auto;
+		max-height: 60px;
+		object-fit: contain;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 1.5;
+
+		@include hg {
+			line-height: 1.2;
+		}
+	}
+}
