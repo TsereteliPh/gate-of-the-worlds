@@ -1,7 +1,9 @@
 //main
+@import "blocks/animations";
 @import "blocks/buttons";
 @import "blocks/form-elements";
 @import "blocks/modal";
+@import "blocks/pagination";
 @import "blocks/socials";
 @import "blocks/text-styles";
 @import "blocks/title";
@@ -11,6 +13,7 @@
 
 // blocks
 @import "blocks/achievements";
+@import "blocks/course-tabs";
 @import "blocks/footer";
 @import "blocks/header";
 @import "blocks/leading-speaker";

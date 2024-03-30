@@ -34,33 +34,33 @@ if ( ! function_exists( 'adem_setup' ) ) {
 	//	register thumbnails
 //	add_image_size( '123x123', 123, 123, true );
 
-	//	register post types
-//	register_post_type( 'review', [
-//		'label' => null,
-//		'labels' => [
-//			'name' => 'Отзывы',
-//			'singular_name' => 'Отзыв',
-//			'add_new' => 'Добавить отзыв',
-//			'add_new_item' => 'Добавить отзыв',
-//			'edit_item' => 'Редактировать отзыв',
-//			'new_item' => 'Новый отзыв',
-//			'view_item' => 'Смотреть отзыв',
-//			'search_items' => 'Найти отзыв',
-//			'not_found' => 'Не найдено',
-//			'not_found_in_trash' => 'Не найдено в корзине',
-//			'menu_name' => 'Отзывы',
-//		],
-//		'public' => true,
-//		'show_in_menu' => true,
-//		'menu_position' => 21,
-//		'menu_icon' => 'dashicons-format-chat',
-//		'supports' => ['title', 'editor'],
-//		'taxonomies' => ['review_type'],
-//		'has_archive' => false,
-//		'rewrite' => true,
-//		'query_var' => true,
-//		'publicly_queryable' => false
-//	] );
+	// register post types
+	register_post_type( 'courses', [
+		'label' => null,
+		'labels' => [
+			'name' => 'Программы и курсы',
+			'singular_name' => 'Курс',
+			'add_new' => 'Добавить курс',
+			'add_new_item' => 'Добавить курс',
+			'edit_item' => 'Редактировать курс',
+			'new_item' => 'Новый курс',
+			'view_item' => 'Смотреть курс',
+			'search_items' => 'Найти курс',
+			'not_found' => 'Не найдено',
+			'not_found_in_trash' => 'Не найдено в корзине',
+			'menu_name' => 'Программы и курсы',
+		],
+		'public' => true,
+		'show_in_menu' => true,
+		'menu_position' => 21,
+		'menu_icon' => 'dashicons-welcome-learn-more',
+		'supports' => ['title', 'editor', 'thumbnail'],
+		'taxonomies' => ['course_type'],
+		'has_archive' => false,
+		'rewrite' => true,
+		'query_var' => true,
+		'publicly_queryable' => false
+	] );
 }
 
 add_action( 'after_setup_theme', 'adem_setup' );

@@ -270,6 +270,34 @@ if (speakerCarousel && window.innerWidth <= 768) {
 	});
 }
 
+const courseTabsCarousel = document.querySelectorAll('.course-tabs__courses');
+
+if (courseTabsCarousel) {
+	courseTabsCarousel.forEach(slider => {
+		let courseTabsSwiper = new Swiper(slider, {
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			pagination: {
+				el: '.course-tabs__pagination',
+				bulletClass: 'pagination__bullet',
+				bulletActiveClass: 'active',
+				clickable: true
+			},
+			breakpoints: {
+				1440: {
+					slidesPerView: 4,
+				},
+				1280: {
+					slidesPerView: 3,
+				},
+				769: {
+					slidesPerView: 2
+				}
+			}
+		});
+	});
+}
+
 // Функционал шапки сайта
 
 // document.addEventListener('DOMContentLoaded', function(e) {
