@@ -104,6 +104,56 @@ acf_add_local_field_group(array(
 					'acfe_layout_col' => 'auto',
 					'acfe_layout_allowed_col' => false,
 				),
+				'layout_66069bebb4679' => array(
+					'key' => 'layout_66069bebb4679',
+					'name' => 'course-tabs',
+					'label' => 'Вкладки с курсами и программами',
+					'display' => 'block',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_66069c06b467c',
+							'label' => '',
+							'name' => '',
+							'aria-label' => '',
+							'type' => 'clone',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'clone' => array(
+								0 => 'group_6606997697d13',
+							),
+							'display' => 'seamless',
+							'layout' => 'block',
+							'prefix_label' => 0,
+							'prefix_name' => 0,
+							'acfe_field_group_condition' => 0,
+							'acfe_seamless_style' => 0,
+							'acfe_clone_modal' => 0,
+							'acfe_clone_modal_close' => 0,
+							'acfe_clone_modal_button' => '',
+							'acfe_clone_modal_size' => 'large',
+						),
+					),
+					'min' => '',
+					'max' => '',
+					'acfe_flexible_thumbnail' => '',
+					'acfe_flexible_render_template' => false,
+					'acfe_flexible_render_style' => false,
+					'acfe_flexible_render_script' => false,
+					'acfe_flexible_settings' => false,
+					'acfe_flexible_settings_size' => 'medium',
+					'acfe_layout_locations' => array(
+					),
+					'acfe_flexible_modal_edit_size' => false,
+					'acfe_flexible_category' => false,
+					'acfe_layout_col' => 'auto',
+					'acfe_layout_allowed_col' => false,
+				),
 				'layout_65fd7fc69c8c3' => array(
 					'key' => 'layout_65fd7fc69c8c3',
 					'name' => 'achievements',
@@ -154,14 +204,14 @@ acf_add_local_field_group(array(
 					'acfe_layout_col' => 'auto',
 					'acfe_layout_allowed_col' => false,
 				),
-				'layout_66069bebb4679' => array(
-					'key' => 'layout_66069bebb4679',
-					'name' => 'course-tabs',
-					'label' => 'Вкладки с курсами и программами',
+				'layout_660825c6ca796' => array(
+					'key' => 'layout_660825c6ca796',
+					'name' => 'schedule',
+					'label' => 'Расписание занятий',
 					'display' => 'block',
 					'sub_fields' => array(
 						array(
-							'key' => 'field_66069c06b467c',
+							'key' => 'field_660825d0ca799',
 							'label' => '',
 							'name' => '',
 							'aria-label' => '',
@@ -175,7 +225,7 @@ acf_add_local_field_group(array(
 								'id' => '',
 							),
 							'clone' => array(
-								0 => 'group_6606997697d13',
+								0 => 'group_660824453d1cc',
 							),
 							'display' => 'seamless',
 							'layout' => 'block',
@@ -252,7 +302,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1711709199,
+	'modified' => 1711810008,
 ));
 
 endif;

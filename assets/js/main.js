@@ -298,6 +298,32 @@ if (courseTabsCarousel) {
 	});
 }
 
+const scheduleCarousel = document.querySelector('.schedule__slider');
+
+if (scheduleCarousel) {
+	let scheduleSwiper = new Swiper(scheduleCarousel, {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		pagination: {
+			el: '.schedule__pagination',
+			bulletClass: 'pagination__bullet',
+			bulletActiveClass: 'active',
+			clickable: true
+		},
+		breakpoints: {
+			1440: {
+				slidesPerView: 3,
+			},
+			1280: {
+				slidesPerView: 3,
+			},
+			769: {
+				slidesPerView: 2
+			}
+		}
+	});
+}
+
 // Функционал шапки сайта
 
 // document.addEventListener('DOMContentLoaded', function(e) {

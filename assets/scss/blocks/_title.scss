@@ -7,6 +7,14 @@
 	line-height: 1.3;
 	text-transform: uppercase;
 
+	&--highlighted {
+		color: var(--secondary);
+
+		span {
+			color: var(--primary);
+		}
+	}
+
 	&--line {
 		position: relative;
 		padding-top: 35px;

@@ -1,0 +1,185 @@
+.schedule {
+	padding: 75px 0 60px;
+
+	@include hg {
+		padding: 50px 0;
+	}
+
+	@include xs {
+		padding: 30px 0;
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__slider {
+		margin-top: 35px;
+		padding: 10px;
+
+		@include hg {
+			margin-top: 25px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		border-radius: 10px;
+		box-shadow: 0 0 20px 0 rgba(#000, 0.1);
+
+		@include sm {
+			max-width: 450px;
+		}
+
+		@include xs {
+			gap: 15px;
+			max-width: 300px;
+		}
+	}
+
+	&__item-box {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		height: 340px;
+		object-fit: cover;
+
+		@include hg {
+			height: 250px;
+		}
+
+		@include lg {
+			height: 320px;
+		}
+
+		@include md {
+			height: 280px;
+		}
+
+		@include xs {
+			height: 150px;
+		}
+
+		&::before {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 140px;
+			background: linear-gradient(to top, #0c112a 0%, rgba(#0c112a, 0) 100%);
+			content: "";
+		}
+	}
+
+	&__item-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__item-title {
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		width: 100%;
+		height: fit-content;
+		padding: 0 50px;
+		color: var(--fc-light);
+		font-weight: 700;
+		font-size: 28px;
+		font-family: var(--font-secondary);
+		text-align: center;
+		text-transform: uppercase;
+
+		@include hg {
+			bottom: 30px;
+			padding: 0 30px;
+			font-size: 24px;
+		}
+
+		@include xs {
+			bottom: 20px;
+			font-size: 20px;
+		}
+	}
+
+	&__item-holder {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		padding: 0 50px 50px;
+
+		@include hg {
+			padding: 0 30px 50px;
+		}
+
+		@include lg {
+			padding: 0 50px 50px;
+		}
+
+		@include md {
+			padding: 0 30px 30px;
+		}
+
+		@include xs {
+			padding: 0 10px 30px;
+		}
+	}
+
+	&__item-list {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: auto;
+	}
+
+	&__item-info {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 0;
+		font-size: 15px;
+		border-bottom: 1px solid #d9d9d9;
+
+		&:last-child {
+			border: none;
+		}
+	}
+
+	&__item-content {
+		font-weight: 700;
+		text-align: right;
+
+		&--price {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 5px;
+			align-items: center;
+			justify-content: flex-end;
+			color: var(--primary);
+
+			span {
+				color: var(--fc-dark);
+				text-decoration: line-through;
+			}
+		}
+	}
+
+	&__item-link {
+		width: 100%;
+		min-width: auto;
+		max-width: 350px;
+		margin: 30px auto 0;
+
+		@include xs {
+			max-width: 200px;
+			margin: 20px auto 0;
+		}
+	}
+}
