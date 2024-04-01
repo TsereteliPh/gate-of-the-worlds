@@ -346,6 +346,23 @@ if (videos) {
 	});
 }
 
+const courseCats = document.querySelectorAll('.course-cats__cat');
+
+if (courseCats && window.innerWidth <= 768) {
+	courseCats.forEach(slider => {
+		let coursesCatsSwiper = new Swiper(slider, {
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			pagination: {
+				el: '.course-cats__pagination',
+				bulletClass: 'pagination__bullet',
+				bulletActiveClass: 'active',
+				clickable: true
+			}
+		});
+	});
+}
+
 //Функционал шапки сайта
 
 document.addEventListener('DOMContentLoaded', function(e) {
