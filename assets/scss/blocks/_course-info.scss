@@ -1,0 +1,144 @@
+.course-info {
+	position: relative;
+	padding: 100px 0 300px;
+	color: var(--fc-light);
+	background: url(assets/images/course-info-bg.jpg) no-repeat 50% / cover;
+
+	@include hg {
+		padding: 60px 0 150px;
+	}
+
+	@include xs {
+		padding: 40px 0 80px;
+	}
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to right, #1e1e1e 0%, rgba(#1e1e1e, 0) 25%, rgba(#1e1e1e, 0) 75%, #1e1e1e 100%);
+		content: "";
+
+		@include xs {
+			background: rgba(#003a2c, 0.7);
+		}
+	}
+
+	&__container {
+
+		&::before {
+			position: absolute;
+			top: 140px;
+			left: 50%;
+			width: 120px;
+			height: 120px;
+			background: url(assets/images/logo-main.png) no-repeat 50% / contain;
+			transform: translateX(-50%);
+			opacity: 0.3;
+			content: "";
+
+			@include md {
+				display: none;
+			}
+		}
+	}
+
+	&__title {
+
+		@include xs {
+			text-align: center;
+		}
+	}
+
+	&__box {
+		display: flex;
+		gap: 40px;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 40px;
+
+		@include md {
+			flex-direction: column;
+			gap: 60px;
+			align-items: flex-start;
+		}
+
+		@include xs {
+			margin-top: 20px;
+		}
+	}
+
+	&__content {
+		max-width: 475px;
+
+		@include lg {
+			max-width: 370px;
+		}
+
+		@include md {
+			max-width: none;
+		}
+	}
+
+	&__text,
+	&__extra-text {
+		line-height: 1.4;
+
+		@include xs {
+			font-size: 16px;
+		}
+	}
+
+	&__advantages {
+		margin-top: 40px;
+	}
+
+	&__advantages-label {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1.3;
+	}
+
+	&__advantages-list {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		margin: 40px 0 0;
+		padding-left: 20px;
+
+		@include xs {
+			margin: 20px 0 0;
+		}
+	}
+
+	&__advantages-item {
+
+		@include xs {
+			font-size: 16px;
+		}
+
+		&::marker {
+			color: var(--tertiary);
+		}
+	}
+
+	&__extra-holder {
+		max-width: 370px;
+
+		@include md {
+			max-width: none;
+		}
+	}
+
+	&__link {
+		width: 100%;
+		max-width: 350px;
+		margin: 60px auto 0;
+
+		@include md {
+			margin: 30px auto 0;
+		}
+	}
+}
