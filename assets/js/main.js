@@ -311,9 +311,6 @@ if (scheduleCarousel) {
 			clickable: true
 		},
 		breakpoints: {
-			1440: {
-				slidesPerView: 3,
-			},
 			1280: {
 				slidesPerView: 3,
 			},
@@ -324,35 +321,60 @@ if (scheduleCarousel) {
 	});
 }
 
-// Функционал шапки сайта
+const videos = document.querySelectorAll('.videos-slider__slider');
 
-// document.addEventListener('DOMContentLoaded', function(e) {
-// 	const header = document.querySelector('.header');
+if (videos) {
+	videos.forEach(slider => {
+		let videosSwiper = new Swiper(slider, {
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			pagination: {
+				el: '.videos-slider__pagination',
+				bulletClass: 'pagination__bullet',
+				bulletActiveClass: 'active',
+				clickable: true
+			},
+			breakpoints: {
+				992: {
+					slidesPerView: 3,
+				},
+				769: {
+					slidesPerView: 2
+				}
+			}
+		});
+	});
+}
 
-// 	if (header) {
-// 		const headerBurger = header.querySelector('.header__burger');
-// 		const headerDrop = header.querySelector('.header__drop');
+//Функционал шапки сайта
 
-// 		const dropOpener = () => {
-// 			header.classList.add('active');
-// 			headerBurger.classList.add('active');
-// 			headerDrop.style.maxHeight = headerDrop.scrollHeight + 'px';
-// 			document.body.style.overflow = 'hidden';
-// 		}
+document.addEventListener('DOMContentLoaded', function(e) {
+	const header = document.querySelector('.header');
 
-// 		const dropCloser = () => {
-// 			header.classList.remove('active');
-// 			headerBurger.classList.remove('active');
-// 			headerDrop.style.maxHeight = 0;
-// 			document.body.style.overflow = 'visible';
-// 		}
+	if (header) {
+		const headerBurger = header.querySelector('.header__burger');
+		const headerDrop = header.querySelector('.header__drop');
 
-// 		headerBurger.addEventListener('click', function() {
-// 			if (this.classList.contains('active')) {
-// 				dropCloser();
-// 			} else {
-// 				dropOpener();
-// 			}
-// 		})
-// 	}
-// })
+		const dropOpener = () => {
+			header.classList.add('active');
+			headerBurger.classList.add('active');
+			headerDrop.style.maxHeight = headerDrop.scrollHeight + 'px';
+			document.body.style.overflow = 'hidden';
+		}
+
+		const dropCloser = () => {
+			header.classList.remove('active');
+			headerBurger.classList.remove('active');
+			headerDrop.style.maxHeight = 0;
+			document.body.style.overflow = 'visible';
+		}
+
+		headerBurger.addEventListener('click', function() {
+			if (this.classList.contains('active')) {
+				dropCloser();
+			} else {
+				dropOpener();
+			}
+		})
+	}
+})

@@ -1,0 +1,67 @@
+.videos-slider {
+	padding: 60px 0 40px;
+	color: var(--fc-light);
+	text-align: center;
+	background: url(assets/images/main-pattern-bg.jpg) no-repeat 50% / cover;
+
+	@include xs {
+		padding: 40px 0;
+	}
+
+	&__title,
+	&__text {
+		max-width: 980px;
+		margin: 0 auto;
+	}
+
+	&__text {
+		margin-top: 15px;
+		line-height: 1.4;
+
+		@include xs {
+			font-size: 16px;
+		}
+	}
+
+	&__slider {
+		margin-top: 40px;
+
+		@include xs {
+			margin-top: 25px;
+		}
+	}
+
+	&__video {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		border-radius: 10px;
+
+		@include sm {
+			max-width: 450px;
+		}
+
+		@include xs {
+			max-width: 300px;
+		}
+
+		@include mouse {
+
+			&:hover {
+
+				img {
+					scale: 1.02;
+				}
+			}
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 16/9;
+			object-fit: cover;
+			transition: var(--transition);
+		}
+	}
+}
