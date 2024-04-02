@@ -1,0 +1,162 @@
+.training-pluses {
+	padding: 75px 0;
+	background: url(assets/images/main-pattern-bg.jpg) no-repeat 50% / cover;
+
+	@include sm {
+		padding: 50px 0;
+	}
+
+	&__title {
+		position: relative;
+		display: flex;
+		align-items: center;
+		max-width: 850px;
+		min-height: 110px;
+		margin: 0 auto;
+		text-align: center;
+
+		@include md {
+			max-width: 80%;
+			min-height: auto;
+		}
+
+		@include xs {
+			max-width: none;
+		}
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: auto;
+			height: 160%;
+			aspect-ratio: 1/1;
+			background: url(assets/images/logo-main.png) no-repeat 50% / contain;
+			transform: translate(-50%, -55%);
+			opacity: 0.2;
+			content: "";
+
+			@include md {
+				height: 170%;
+			}
+
+			@include xs {
+				display: none;
+			}
+		}
+	}
+
+	&__slider {
+		margin-top: 70px;
+		overflow: visible;
+
+		@include hg {
+			margin-top: 40px;
+		}
+
+		@include sm {
+			overflow: hidden;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+
+		@include md {
+			grid-template-columns: 1fr;
+		}
+
+		@include sm {
+			display: flex;
+			gap: 0;
+		}
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 10px 60px;
+		align-items: center;
+		padding: 30px 20px 20px;
+		background: var(--bg-primary);
+		border-radius: 10px;
+		box-shadow: 0 0 20px rgba(#000, 0.1);
+
+		@include hg {
+			gap: 10px 30px;
+		}
+
+		@include sm {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			justify-content: center;
+			max-width: 450px;
+			height: auto;
+		}
+
+		@include xs {
+			max-width: 300px;
+		}
+	}
+
+	&__item-icon {
+		display: flex;
+		grid-row: span 2;
+		width: 140px;
+		height: auto;
+		aspect-ratio: 1/1;
+
+		@include xs {
+			width: 100px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__item-title {
+		color: var(--secondary);
+		font-weight: 700;
+		font-size: 28px;
+		font-family: var(--font-secondary);
+		text-transform: uppercase;
+
+		@include hg {
+			font-size: 24px;
+		}
+
+		@include sm {
+			font-size: 22px;
+			text-align: center;
+		}
+
+		@include xs {
+			font-size: 20px;
+		}
+	}
+
+	&__item-text {
+
+		@include sm {
+			text-align: center;
+		}
+
+		@include xs {
+			font-size: 16px;
+		}
+	}
+
+	&__pagination {
+		display: none;
+
+		@include sm {
+			display: flex;
+		}
+	}
+}

@@ -7,6 +7,31 @@
 		background-position: left 50%;
 	}
 
+	&:has(+ .training-pluses) {
+		padding-bottom: 520px;
+
+		@include md {
+			padding-bottom: 400px;
+		}
+
+		@include xs {
+			padding-bottom: 300px;
+		}
+	}
+
+	+ .training-pluses {
+		margin-top: -380px;
+		background: none;
+
+		@include md {
+			margin-top: -300px;
+		}
+
+		@include xs {
+			margin-top: -250px;
+		}
+	}
+
 	&__title {
 
 		@include sm {

@@ -389,6 +389,21 @@ if (mastersCarousel) {
 	});
 }
 
+const plusesCarousel = document.querySelector('.training-pluses__slider');
+
+if (plusesCarousel && window.innerWidth <= 768) {
+	let plusesSwiper = new Swiper(plusesCarousel, {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		pagination: {
+			el: '.training-pluses__pagination',
+			bulletClass: 'pagination__bullet',
+			bulletActiveClass: 'active',
+			clickable: true
+		}
+	});
+}
+
 //Функционал шапки сайта
 
 document.addEventListener('DOMContentLoaded', function(e) {
