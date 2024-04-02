@@ -61,6 +61,33 @@ if ( ! function_exists( 'adem_setup' ) ) {
 		'query_var' => true,
 		'publicly_queryable' => false
 	] );
+
+	register_post_type( 'masters', [
+		'label' => null,
+		'labels' => [
+			'name' => 'Мастера',
+			'singular_name' => 'Мастер',
+			'add_new' => 'Добавить мастера',
+			'add_new_item' => 'Добавить мастера',
+			'edit_item' => 'Редактировать информацию о мастере',
+			'new_item' => 'Новый мастер',
+			'view_item' => 'Смотреть информацию о мастере',
+			'search_items' => 'Найти мастера',
+			'not_found' => 'Не найдено',
+			'not_found_in_trash' => 'Не найдено в корзине',
+			'menu_name' => 'Мастера',
+		],
+		'public' => true,
+		'show_in_menu' => true,
+		'menu_position' => 22,
+		'menu_icon' => 'dashicons-groups',
+		'supports' => ['title', 'editor', 'thumbnail'],
+		'taxonomies' => ['course_type'],
+		'has_archive' => false,
+		'rewrite' => true,
+		'query_var' => true,
+		'publicly_queryable' => false
+	] );
 }
 
 add_action( 'after_setup_theme', 'adem_setup' );

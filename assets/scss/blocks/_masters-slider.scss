@@ -1,0 +1,108 @@
+.masters-slider {
+	padding: 80px 0 40px;
+	background: url(assets/images/main-pattern-bg.jpg) no-repeat 50% / cover;
+
+	&__title {
+		position: relative;
+		display: flex;
+		align-items: center;
+		max-width: 950px;
+		min-height: 110px;
+		margin: 0 auto;
+		text-align: center;
+
+		@include md {
+			max-width: 80%;
+			min-height: auto;
+		}
+
+		@include xs {
+			max-width: none;
+		}
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: auto;
+			height: 160%;
+			aspect-ratio: 1/1;
+			background: url(assets/images/logo-main.png) no-repeat 50% / contain;
+			transform: translate(-50%, -55%);
+			opacity: 0.4;
+			content: "";
+
+			@include md {
+				height: 170%;
+			}
+		}
+	}
+
+	&__slider {
+		margin-top: 30px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+
+	&__item-img {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1/1;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: contain;
+			filter: drop-shadow(0 0 10px rgba(#fff, 0.4));
+		}
+	}
+
+	&__item-info {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		gap: 15px;
+		align-items: center;
+		padding: 30px 40px;
+		text-align: center;
+		background: var(--fc-light);
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+
+		@include lg {
+			padding: 30px 20px;
+		}
+	}
+
+	&__item-name {
+		color: var(--secondary);
+		font-weight: 700;
+		font-size: 28px;
+		font-family: var(--font-secondary);
+		text-transform: uppercase;
+
+		@include lg {
+			font-size: 24px;
+		}
+
+		@include sm {
+			font-size: 22px;
+		}
+	}
+
+	&__item-text {
+		font-size: 16px;
+
+		@include sm {
+			font-size: 14px;
+		}
+	}
+}

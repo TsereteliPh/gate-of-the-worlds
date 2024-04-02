@@ -363,6 +363,32 @@ if (courseCats && window.innerWidth <= 768) {
 	});
 }
 
+const mastersCarousel = document.querySelector('.masters-slider__slider');
+
+if (mastersCarousel) {
+	let mastersSwiper = new Swiper(mastersCarousel, {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		pagination: {
+			el: '.masters-slider__pagination',
+			bulletClass: 'pagination__bullet',
+			bulletActiveClass: 'active',
+			clickable: true
+		},
+		breakpoints: {
+			1440: {
+				slidesPerView: 4
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			577: {
+				slidesPerView: 2
+			}
+		}
+	});
+}
+
 //Функционал шапки сайта
 
 document.addEventListener('DOMContentLoaded', function(e) {
