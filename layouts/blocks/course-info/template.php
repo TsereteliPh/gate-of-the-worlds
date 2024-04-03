@@ -21,7 +21,7 @@
 							<?php endif; ?>
 
 							<?php if ( $advantages['advantages'] ) : ?>
-								<ul class="course-info__advantages-list">
+								<ul class="st-ul course-info__advantages-list">
 									<?php foreach ( $advantages['advantages'] as $item ) : ?>
 										<li class="course-info__advantages-item"><?php echo $item['text']; ?></li>
 									<?php endforeach; ?>
