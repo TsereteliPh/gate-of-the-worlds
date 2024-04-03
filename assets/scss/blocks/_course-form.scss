@@ -1,0 +1,62 @@
+.course-form {
+	position: relative;
+	padding: 50px 0 100px;
+	background: url(assets/images/course-form-bg.jpg) no-repeat 50% / cover;
+
+	@include sm {
+		padding: 50px 0;
+	}
+
+	&::before {
+
+		@include xs {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(#003a2c, 0.7);
+			content: "";
+		}
+	}
+
+	&__title {
+
+		@include xs {
+			text-align: center;
+		}
+	}
+
+	&__text {
+		margin-top: 15px;
+		color: var(--fc-light);
+
+		@include xs {
+			text-align: center;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		max-width: 370px;
+		margin-top: 30px;
+
+		@include sm {
+			margin: 30px auto 0;
+		}
+	}
+
+	&__form-policy {
+		color: #c4c4c4;
+
+		@include xs {
+			padding: 0 15px;
+		}
+
+		a {
+			color: var(--tertiary);
+		}
+	}
+}

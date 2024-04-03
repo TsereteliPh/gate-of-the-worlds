@@ -123,6 +123,7 @@ function send_mail() {
 	if ( $_POST['form_name'] == 'Консультация' && ! wp_verify_nonce( $_POST['footer_advice_nonce'], $_POST['form_name'] ) ) exit;
 	if ( $_POST['form_name'] == 'Заявка' && ! wp_verify_nonce( $_POST['modal_callback_nonce'], $_POST['form_name'] ) ) exit;
 	if ( $_POST['form_name'] == 'Подбор' && ! wp_verify_nonce( $_POST['welcome_selection_nonce'], $_POST['form_name'] ) ) exit;
+	if ( $_POST['form_name'] == 'Курс' && ! wp_verify_nonce( $_POST['course_form_nonce'], $_POST['form_name'] ) ) exit;
 
 	$form_name = $_POST['form_name'];
 	$mail = '';
