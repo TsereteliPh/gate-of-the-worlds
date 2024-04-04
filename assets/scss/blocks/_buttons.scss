@@ -49,3 +49,35 @@
 		content: "";
 	}
 }
+
+.btn-prev,
+.btn-next {
+	display: flex;
+	width: fit-content;
+	cursor: pointer;
+	transition: var(--transition);
+
+	&.swiper-button-disabled {
+		cursor: default;
+		opacity: 0.5;
+	}
+
+	svg {
+		color: var(--primary);
+		transition: var(--transition);
+	}
+}
+
+.btn-next {
+
+	svg {
+		transform: rotate(90deg);
+	}
+}
+
+.btn-prev {
+
+	svg {
+		transform: rotate(-90deg);
+	}
+}

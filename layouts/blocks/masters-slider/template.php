@@ -27,7 +27,6 @@
 												echo wp_get_attachment_image( 45, 'large', false );
 											}
 										?>
-										<?php //the_post_thumbnail( 'full' ); ?>
 									</div>
 
 									<div class="masters-slider__item-info">

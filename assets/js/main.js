@@ -404,6 +404,32 @@ if (plusesCarousel && window.innerWidth <= 768) {
 	});
 }
 
+const graduatesCarousel = document.querySelector('.graduates__slider');
+
+if (graduatesCarousel) {
+	let graduatesSwiper = new Swiper(graduatesCarousel, {
+		slidesPerView: 1,
+		spaceBetween: 40,
+		centeredSlides: true,
+		pagination: {
+			el: '.graduates__pagination',
+			bulletClass: 'pagination__bullet',
+			bulletActiveClass: 'active',
+			clickable: true
+		},
+		navigation: {
+			nextEl: '.graduates__next',
+			prevEl: '.graduates__prev',
+		},
+		breakpoints: {
+			1440: {
+				spaceBetween: 240,
+				slidesPerView: 'auto',
+			}
+		}
+	});
+}
+
 //Функционал шапки сайта
 
 document.addEventListener('DOMContentLoaded', function(e) {
