@@ -1,4 +1,4 @@
-<section class="course-cats">
+<section id="course-cats" class="course-cats">
 	<div class="container--large">
 		<?php
 			$title = get_sub_field( 'title' );

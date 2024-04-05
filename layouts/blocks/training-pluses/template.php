@@ -1,4 +1,4 @@
-<section class="training-pluses">
+<section id="training-pluses" class="training-pluses">
 	<div class="container">
 		<?php if ( get_sub_field( 'title' ) ) : ?>
 			<h2 class="title training-pluses__title"><?php the_sub_field( 'title' ); ?></h2>

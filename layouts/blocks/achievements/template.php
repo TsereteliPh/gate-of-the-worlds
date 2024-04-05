@@ -1,5 +1,5 @@
 
-<section class="achievements">
+<section id="achievements" class="achievements">
 	<div class="container achievements__container">
 		<?php if ( get_sub_field( 'title' ) ) : ?>
 			<h2 class="title title--line achievements__title"><?php the_sub_field( 'title' ); ?></h2>

@@ -5,7 +5,7 @@
     $extra_text = get_sub_field( 'extra_text' );
     $videos = get_sub_field( 'video' );
 ?>
-<section class="leading-speaker">
+<section id="leading-speaker" class="leading-speaker">
     <div class="container--small">
         <div class="leading-speaker__content">
             <?php if ( $title ) : ?>

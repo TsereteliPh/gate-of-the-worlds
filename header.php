@@ -23,6 +23,15 @@
 
 		<a href="<?php echo bloginfo( 'url' ); ?>" class="header__logo" aria-label="Логотип компании Врата Миров"></a>
 
+		<?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu_main',
+				'container' => '',
+				'menu_id' => 'menu-main',
+				'menu_class' => 'reset-list header__menu'
+			) );
+		?>
+
 		<?php if ( $tel ) : ?>
 			<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="header__phone">
 				<svg width="18" height="18"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-phone"></use></svg>

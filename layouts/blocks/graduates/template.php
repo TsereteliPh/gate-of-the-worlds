@@ -1,4 +1,4 @@
-<section class="graduates">
+<section id="graduates" class="graduates">
 	<?php
 		$title = get_sub_field( 'title' );
 		if ( $title ) :

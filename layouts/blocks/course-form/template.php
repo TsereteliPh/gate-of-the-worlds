@@ -1,4 +1,4 @@
-<section class="course-form">
+<section id="course-form" class="course-form">
 	<div class="container--small">
 		<?php if ( get_sub_field( 'title' ) ) : ?>
 			<h2 class="title title--line course-form__title"><?php the_sub_field( 'title' ); ?></h2>

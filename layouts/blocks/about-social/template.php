@@ -1,4 +1,4 @@
-<section class="about-social">
+<section id="about-social" class="about-social">
 	<div class="container--small">
 		<?php if ( get_sub_field( 'title' ) ) : ?>
 			<h2 class="title title--line about-social__title"><?php the_sub_field( 'title' ); ?></h2>

@@ -3,7 +3,7 @@
 	$text = get_sub_field( 'text' );
 	$tabs = get_sub_field( 'courses' );
 ?>
-<section class="course-tabs">
+<section id="course-tabs" class="course-tabs">
 	<div class="container--large">
 		<div class="course-tabs__text-holder">
 			<?php if ( $title ) : ?>

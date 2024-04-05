@@ -1,4 +1,4 @@
-<section class="videos-slider">
+<section id="videos-slider" class="videos-slider">
 	<div class="container--large">
 		<?php if ( get_sub_field( 'title' ) ) : ?>
 			<h2 class="title videos-slider__title"><?php the_sub_field( 'title' ); ?></h2>

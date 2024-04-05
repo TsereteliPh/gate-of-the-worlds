@@ -1,4 +1,4 @@
-<section class="schedule">
+<section id="schedule" class="schedule">
 	<div class="container--large">
 		<?php
 			$title = get_sub_field( 'title' );
