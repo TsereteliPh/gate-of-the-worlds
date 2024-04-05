@@ -21,12 +21,12 @@
 							</a>
 						<?php endforeach; ?>
 					</div>
+
+					<div class="pagination videos-slider__pagination"></div>
 				</div>
 
 				<?php
 			endif;
 		?>
-
-		<div class="pagination videos-slider__pagination"></div>
 	</div>
 </section>
