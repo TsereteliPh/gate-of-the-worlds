@@ -43,6 +43,33 @@ function setHeaderScrollClass() {
 	});
 }
 
+function accordion() {
+	const accordionHolders = document.querySelectorAll('.js-accordion');
+
+	accordionHolders.forEach(accordion => {
+		const accordionBtns = accordion.querySelectorAll('button');
+
+		const accordionBtnsClose = () => {
+			for (let btn of accordionBtns) {
+				btn.classList.remove('active');
+				btn.nextElementSibling.style.maxHeight = 0;
+			}
+		}
+
+		accordionBtns.forEach(btn => {
+			btn.addEventListener('click', function() {
+				if (this.classList.contains('active')) {
+					accordionBtnsClose();
+				} else {
+					accordionBtnsClose();
+					this.classList.add('active');
+					slideToggle(this.nextElementSibling);
+				}
+			})
+		});
+	});
+}
+
 function setTelMask() {
 	[].forEach.call(document.querySelectorAll('[type="tel"]'), function (input) {
 		let keyCode;
@@ -226,6 +253,8 @@ function showMorePosts() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+	accordion();
+
 	setHeaderScrollClass();
 
 	setFileName();

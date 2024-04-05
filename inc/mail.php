@@ -124,6 +124,7 @@ function send_mail() {
 	if ( $_POST['form_name'] == 'Заявка' && ! wp_verify_nonce( $_POST['modal_callback_nonce'], $_POST['form_name'] ) ) exit;
 	if ( $_POST['form_name'] == 'Подбор' && ! wp_verify_nonce( $_POST['welcome_selection_nonce'], $_POST['form_name'] ) ) exit;
 	if ( $_POST['form_name'] == 'Курс' && ! wp_verify_nonce( $_POST['course_form_nonce'], $_POST['form_name'] ) ) exit;
+	if ( $_POST['form_name'] == 'Вопрос' && ! wp_verify_nonce( $_POST['modal_question_nonce'], $_POST['form_name'] ) ) exit;
 
 	$form_name = $_POST['form_name'];
 	$mail = '';
@@ -131,6 +132,7 @@ function send_mail() {
 	$mail .= isset( $_POST['client_tel'] ) ? "Телефон: <a href='tel:" . strip_tags( $_POST['client_tel'] ) . "'>" . strip_tags( $_POST['client_tel'] ) . "</a><br/>" : '';
 	$mail .= isset( $_POST['client_email'] ) ? "Email: <a href='mailto:" . strip_tags( $_POST['client_email'] ) . "'>" . strip_tags( $_POST['client_email'] ) . "</a><br/>" : '';
 	$mail .= isset( $_POST['client_message'] ) ? "Сообщение: " . strip_tags( $_POST['client_message'] ) . "<br/>" : '';
+	$mail .= isset( $_POST['client_question'] ) ? "Вопрос: " . strip_tags( $_POST['client_question'] ) . "<br/>" : '';
 	$mail .= "Страница: $_POST[page_request] <br/>";
 
 	require_once ABSPATH . 'wp-admin/includes/image.php';

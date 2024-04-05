@@ -2,12 +2,41 @@
 	padding: 50px 0;
 	overflow: hidden;
 
+	+ .faq {
+		margin-top: -350px;
+		padding-top: 800px;
+
+		@include hg {
+			padding-top: 500px;
+		}
+
+		@include xs {
+			margin-top: -200px;
+			padding-top: 350px;
+		}
+
+		&::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 480px;
+			background: linear-gradient(to bottom, var(--bg-primary) 0%, rgba(#fff, 0) 100%);
+			content: "";
+
+			@include xs {
+				height: 250px;
+			}
+		}
+	}
+
 	&__title {
 		margin: 0 1.5rem;
 		text-align: center;
 	}
 
 	&__slider {
+		z-index: var(--ui-index-1);
 		margin-top: 60px;
 		overflow: visible;
 
@@ -34,8 +63,11 @@
 		height: auto;
 		padding: 40px 100px 0;
 		overflow: hidden;
+		background: var(--bg-primary);
 		border-radius: 10px;
 		box-shadow: 0 0 20px rgba(#000, 0.2);
+		opacity: 0.4;
+		transition: opacity 0.3s ease;
 
 		@include hg {
 			max-width: none;
@@ -51,6 +83,10 @@
 
 		@include xs {
 			padding: 10px 10px 15px;
+		}
+
+		&.swiper-slide-active {
+			opacity: 1;
 		}
 	}
 

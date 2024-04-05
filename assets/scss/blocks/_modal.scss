@@ -82,6 +82,23 @@
 		}
 	}
 
+	&--question {
+
+		input[name="client_name"] {
+
+			@include hg {
+				grid-column: span 2;
+			}
+		}
+
+		.modal__submit {
+
+			@include hg {
+				grid-column: span 2;
+			}
+		}
+	}
+
 	>.carousel__button.is-close {
 		display: none;
 	}
@@ -124,6 +141,15 @@
 		@include xs {
 			display: flex;
 			flex-direction: column;
+		}
+	}
+
+	&__textarea {
+		grid-column: span 3;
+		min-height: 100px;
+
+		@include hg {
+			grid-column: span 2;
 		}
 	}
 

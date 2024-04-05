@@ -71,3 +71,34 @@
 		<span></span>
 	</button>
 </div>
+
+<div id="question" class="modal modal--question">
+	<div class="modal__label">Задайте Ваш вопрос</div>
+
+	<form method="POST" class="modal__form" name="Вопрос">
+		<input type="text" class="input modal__input" name="client_name" placeholder="Ваше ФИО" required>
+
+		<input type="email" class="input modal__input" name="client_email" placeholder="E-mail">
+
+		<input type="tel" class="input modal__input" name="client_tel" placeholder="+7 ( ____ ) - ___ - __ - __" required>
+
+		<textarea class="input modal__textarea" name="client_question" placeholder="Ваш вопрос" required></textarea>
+
+		<label class="checkbox modal__form-policy">
+			<input class="checkbox__input" type="checkbox" checked required>
+			<span class="checkbox__switcher"></span>
+			<span class="checkbox__text">Даю согласие на обработку моих персональных данных в соответствии с <a href="<?php echo get_privacy_policy_url(); ?>">Политикой Конфиденциальности</a></span>
+		</label>
+
+		<input type="text" class="hidden" name="page_request" value="<?php echo is_archive() ? get_the_archive_title() : get_the_title(); ?>">
+
+		<?php wp_nonce_field( 'Вопрос', 'modal_question_nonce' ); ?>
+
+		<button class="btn modal__submit" type="submit">Отправить</button>
+	</form>
+
+	<button class="modal__close" type="button">
+		Закрыть
+		<span></span>
+	</button>
+</div>
