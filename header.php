@@ -5,6 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" type="image/x-icon" width="16" height="16">
 	<?php wp_head(); ?>
 </head>
 
@@ -15,7 +16,7 @@
 	$tel = get_field( 'tel', 'options' );
 	$socials = get_field( 'socials', 'options' );
 ?>
-<header class="header">
+<header class="header<?php echo is_front_page() ? ' header--index' : ''; ?>">
 	<div class="container--large header__container">
 		<button class="header__burger" type="button" aria-label="Открыть/Закрыть меню">
 			<span></span>
@@ -53,5 +54,5 @@
 	</div>
 </header>
 
-<main class="main">
+<main class="main<?php echo is_front_page() ? '' : ' main--indent'; ?>">
 	<?php if ( is_front_page() ) get_template_part('layouts/partials/welcome'); ?>
