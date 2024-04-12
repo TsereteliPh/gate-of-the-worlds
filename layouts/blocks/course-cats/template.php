@@ -36,33 +36,17 @@
 					<?php foreach ( $cats as $key => $cat ) : ?>
 						<div id="course-cat-<?php echo $key + 1; ?>" class="course-cats__cat swiper<?php echo ( $key == 0 ) ? ' active' : ''; ?>">
 							<ul class="reset-list course-cats__list swiper-wrapper">
-								<?php foreach ( $cat['courses'] as $post ) : ?>
-									<?php setup_postdata( $post ); ?>
-										<li class="course-cats__item swiper-slide">
-											<a <?php echo get_field( 'link' ) ? 'href="' . get_field( 'link' ) . '"' : ''; ?> class="course-cats__item-link">
-												<?php
-													if ( get_the_post_thumbnail() ) {
-														the_post_thumbnail( 'large', array(
-															'class' => 'course-cats__item-img'
-														) );
-													} else {
-														echo wp_get_attachment_image( 45, 'large', false, array(
-															'class' => 'course-cats__item-img'
-														) );
-													}
-												?>
+								<?php
+									foreach ( $cat['courses'] as $post ) {
+										setup_postdata( $post );
 
-												<div class="course-cats__item-content">
-													<?php if ( get_field( 'master') ) : ?>
-														<div class="course-cats__item-master"><?php the_field( 'master' ); ?></div>
-													<?php endif; ?>
+										get_template_part('layouts/partials/cards/course-card', null, array(
+											'class' => 'course-cats__item swiper-slide'
+										));
 
-													<div class="course-cats__item-title"><?php echo '&#171;' .  get_the_title() . '&#187;'; ?></div>
-												</div>
-											</a>
-										</li>
-									<?php wp_reset_postdata(); ?>
-								<?php endforeach; ?>
+										wp_reset_postdata();
+									}
+								?>
 							</ul>
 
 							<div class="pagination course-cats__pagination"></div>

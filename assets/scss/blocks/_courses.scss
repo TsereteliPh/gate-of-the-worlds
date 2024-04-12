@@ -1,0 +1,55 @@
+.courses {
+	margin: 80px 0 30px;
+
+	@include hg {
+		margin: 60px 0 30px;
+	}
+
+	@include xs {
+		margin: 30px 0;
+	}
+
+	h1 {
+		font-size: clamp(1.333rem, 1.051rem + 1.41vw, 2.556rem);
+	}
+
+	h2 {
+		font-size: clamp(1.111rem, 0.855rem + 1.282vw, 2.222rem);
+	}
+
+	h3 {
+		font-size: clamp(1rem, 0.769rem + 1.154vw, 2rem);
+	}
+
+	&__title {
+		color: var(--secondary);
+		font-weight: 700;
+		font-family: var(--font-secondary);
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 20px;
+
+		@include hg {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include md {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include xs {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__button {
+		width: 100%;
+		max-width: 350px;
+		margin: 40px auto 0;
+	}
+}

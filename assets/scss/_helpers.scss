@@ -23,7 +23,7 @@
 	position: relative;
 	pointer-events: none;
 
-	&::before {
+	&::after {
 		position: absolute;
 		top: 50%;
 		left: 50%;

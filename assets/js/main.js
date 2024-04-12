@@ -218,39 +218,39 @@ function tabs() {
 
 //Ajax
 
-// function showMorePosts() {
-// 	const show_more_btn = document.querySelector('.js-show-more');
+function showMorePosts() {
+	const show_more_btn = document.querySelector('.js-show-more');
 
-// 	if (!show_more_btn) return;
+	if (!show_more_btn) return;
 
-// 	show_more_btn.addEventListener('click', function (e) {
-// 		e.stopImmediatePropagation();
-// 		const container = document.querySelector('.js-show-more-container');
-// 		this.textContent = 'Загрузка...';
+	show_more_btn.addEventListener('click', function (e) {
+		e.stopImmediatePropagation();
+		const container = document.querySelector('.js-show-more-container');
+		this.classList.add('loader');
 
-// 		const response = fetch(adem_ajax.url, {
-// 			method: 'POST',
-// 			headers: {
-// 				'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-// 			},
-// 			body: new URLSearchParams({
-// 				action: 'load_more',
-// 				query: posts,
-// 				page: current_page,
-// 			}),
-// 		})
-// 			.then((response) => response.text())
-// 			.then((data) => {
-// 				this.innerHTML = this.dataset.text;
-// 				container.insertAdjacentHTML('beforeend', data);
-// 				current_page++;
-// 				if (current_page === max_pages) this.remove();
-// 			})
-// 			.catch((error) => {
-// 				console.error('Error:', error);
-// 			});
-// 	});
-// }
+		const response = fetch(adem_ajax.url, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+			},
+			body: new URLSearchParams({
+				action: 'load_more',
+				query: posts,
+				page: current_page,
+			}),
+		})
+			.then((response) => response.text())
+			.then((data) => {
+				this.classList.remove('loader');
+				container.insertAdjacentHTML('beforeend', data);
+				current_page++;
+				if (current_page === max_pages) this.remove();
+			})
+			.catch((error) => {
+				console.error('Error:', error);
+			});
+	});
+}
 
 document.addEventListener('DOMContentLoaded', function () {
 	accordion();
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	tabs();
 
-	// showMorePosts();
+	showMorePosts();
 });
 
 //Fancybox

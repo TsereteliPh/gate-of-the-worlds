@@ -39,7 +39,7 @@
 				if ( $link ) :
 					?>
 
-					<a href="<?php echo $lonk['url']; ?>" class="btn about-social__link" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+					<a href="<?php echo $link['url']; ?>" class="btn about-social__link" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
 
 					<?php
 				endif;
