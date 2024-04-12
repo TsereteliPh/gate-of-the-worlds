@@ -1,16 +1,15 @@
 .not-found {
 	display: flex;
 	justify-content: center;
-	min-height: 100vh;
-	padding: 160px 0 50px;
-	background: url(assets/images/welcome-bg.jpg) no-repeat 50% / cover;
+	min-height: calc(100vh - 120px);
+	background: url(assets/images/main-pattern-bg.jpg) no-repeat 50% / cover;
 
-	@include hg {
-		padding: 120px 0 50px;
+	@include md {
+		min-height: calc(100vh - 115px);
 	}
 
-	@include xs {
-		padding: 140px 0 30px;
+	@include sm {
+		min-height: calc(100vh - 100px);
 	}
 
 	&__container {
