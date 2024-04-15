@@ -1,0 +1,140 @@
+.faq-links {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100svh;
+	padding: 75px 0;
+	background: url(assets/images/faq-links-bg.jpg) no-repeat 50% / cover;
+
+	@include hg {
+		padding: 60px 0;
+	}
+
+	@include xs {
+		padding: 40px 0;
+	}
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to top, #171c23 0%, rgba(#0c112a, 0) 100%);
+		content: "";
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__list {
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 100px 280px;
+		margin-top: 40px;
+
+		@include hg {
+			gap: 50px 200px;
+		}
+
+		@include sm {
+			gap: 40px;
+		}
+
+		@include xs {
+			grid-template-columns: 1fr;
+			margin-top: 20px;
+		}
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 220px;
+			height: auto;
+			aspect-ratio: 1/1;
+			background: url(assets/images/logo-main.png) no-repeat 50% / contain;
+			transform: translate(-50%, -80%);
+			opacity: 0.2;
+			content: "";
+
+			@include hg {
+				width: 180px;
+			}
+
+			@include sm {
+				display: none;
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		align-items: center;
+		width: 100%;
+		max-width: 380px;
+		height: auto;
+		margin: 0 auto;
+
+		@include xs {
+			gap: 20px;
+		}
+	}
+
+	&__item-photo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 40px;
+		padding: 10px;
+		aspect-ratio: 1/1;
+		border: 1px solid var(--fc-light);
+		border-radius: 5px;
+		transition: var(--transition);
+
+		@include md {
+			margin: 0 20px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 5px;
+		}
+	}
+
+	&__item-label {
+		width: 100%;
+		margin-top: auto;
+		padding-bottom: 5px;
+		color: var(--fc-light);
+		font-weight: 700;
+		font-size: 28px;
+		font-family: var(--font-secondary);
+		text-align: center;
+		text-transform: uppercase;
+		border-bottom: 1px solid var(--fc-light);
+
+		@include hg {
+			width: fit-content;
+			padding: 0 10px 5px;
+			font-size: 22px;
+		}
+	}
+
+	&__item-link {
+		width: 100%;
+		max-width: 350px;
+		margin-top: 30px;
+
+		@include hg {
+			margin-top: 0;
+		}
+	}
+}
