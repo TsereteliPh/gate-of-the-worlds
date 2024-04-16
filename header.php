@@ -16,7 +16,7 @@
 	$tel = get_field( 'tel', 'options' );
 	$socials = get_field( 'socials', 'options' );
 ?>
-<header class="header<?php echo ( is_front_page() || is_page( 386) ) ? ' header--index' : ''; ?>">
+<header class="header<?php echo ( is_front_page() || is_page( 413 ) || in_array( 413, get_post_ancestors( get_the_ID() ) ) ) ? ' header--index' : ''; ?>">
 	<div class="container--large header__container">
 		<button class="header__burger" type="button" aria-label="Открыть/Закрыть меню">
 			<span></span>
@@ -54,5 +54,5 @@
 	</div>
 </header>
 
-<main class="main<?php echo ( is_front_page() || is_page( 386 ) ) ? '' : ' main--indent'; ?>">
+<main class="main<?php echo ( is_front_page() || is_page( 413 ) || in_array( 413, get_post_ancestors( get_the_ID() ) ) ) ? '' : ' main--indent'; ?>">
 	<?php if ( is_front_page() ) get_template_part('layouts/partials/welcome'); ?>

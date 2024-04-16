@@ -25,8 +25,8 @@
 
 							<div class="faq-links__item-label"><?php echo $link['name']; ?></div>
 
-							<?php if (! $link['link'] ) : ?>
-								<a href="<?php echo $link['link']; ?>" class="btn faq-links__item-link">Задать вопрос</a>
+							<?php if ( $link['link'] ) : ?>
+								<a href="<?php echo $link['link']['url']; ?>" class="btn faq-links__item-link" target="<?php echo $link['link']['target']; ?>">Задать вопрос</a>
 							<?php endif; ?>
 						</li>
 					<?php endforeach; ?>
