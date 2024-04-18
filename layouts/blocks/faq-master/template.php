@@ -1,28 +1,30 @@
 <section class="faq-master">
 	<div class="container--large faq-master__container">
-		<?php
-			$title = get_sub_field( 'title' );
-			if ( $title ) {
-				echo sprintf(
-					'<%1$s class="title faq-master__title">%2$s</%1$s>',
-					$title['type'],
-					$title['text']
-				);
-			}
-		?>
+		<div class="faq-master__wrapper">
+			<?php
+				$title = get_sub_field( 'title' );
+				if ( $title ) {
+					echo sprintf(
+						'<%1$s class="title faq-master__title">%2$s</%1$s>',
+						$title['type'],
+						$title['text']
+					);
+				}
+			?>
 
-		<?php
-			$img = get_sub_field( 'img' );
-			if ( $img ) :
-				?>
+			<?php
+				$img = get_sub_field( 'img' );
+				if ( $img ) :
+					?>
 
-				<div class="faq-master__photo"><?php echo wp_get_attachment_image( $img, 'large', false ); ?></div>
+					<div class="faq-master__photo"><?php echo wp_get_attachment_image( $img, 'large', false ); ?></div>
 
-				<?php
-			endif;
-		?>
+					<?php
+				endif;
+			?>
 
-		<button class="btn faq-master__modal" type="button" data-fancybox data-src="#question">Задать вопрос</button>
+			<button class="btn faq-master__modal" type="button" data-fancybox data-src="#question">Задать вопрос</button>
+		</div>
 
 		<?php
 			$faq = get_sub_field( 'faq' );
@@ -45,6 +47,10 @@
 											echo '<svg class="faq-master__user-photo" width="100" height="100"><use xlink:href="' . get_template_directory_uri() . '/assets/images/sprite.svg#icon-no-photo"></use></svg>';
 										}
 									?>
+
+									<?php if ( $item['date'] ) : ?>
+										<time class="faq-master__user-date" datetime="<?php echo $item['date']; ?>"><?php echo date( 'd.m.Y', strtotime( $item['date'] ) ); ?></time>
+									<?php endif; ?>
 								</div>
 
 								<div class="faq-master__question"><?php echo $item['question']; ?></div>

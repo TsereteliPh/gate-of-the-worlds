@@ -23,7 +23,7 @@
 								<?php echo wp_get_attachment_image( $link['img'] ? $link['img'] : 45, 'large', false ); ?>
 							</div>
 
-							<div class="faq-links__item-label"><?php echo $link['name']; ?></div>
+							<a href="<?php echo $link['link']['url']; ?>" class="faq-links__item-label" target="<?php echo $link['link']['target']; ?>"><?php echo $link['name']; ?></a>
 
 							<?php if ( $link['link'] ) : ?>
 								<a href="<?php echo $link['link']['url']; ?>" class="btn faq-links__item-link" target="<?php echo $link['link']['target']; ?>">Задать вопрос</a>

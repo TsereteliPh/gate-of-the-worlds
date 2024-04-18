@@ -56,6 +56,20 @@
 		}
 	}
 
+	&__wrapper {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 20px 40px;
+		align-items: center;
+		width: fit-content;
+		margin: 0 auto;
+
+		@include sm {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
 	&__title {
 		position: relative;
 		display: flex;
@@ -93,18 +107,23 @@
 
 	&__photo {
 		display: flex;
+		grid-row: 1/3;
+		grid-column: 1/2;
 		align-items: center;
 		justify-content: center;
 		width: 300px;
 		height: auto;
 		aspect-ratio: 1/1;
-		margin: 15px auto 0;
 		padding: 10px;
 		border: 1px solid var(--fc-light);
 		border-radius: 5px;
 
 		@include hg {
 			width: 250px;
+		}
+
+		@include md {
+			order: -1;
 		}
 
 		@include xs {
@@ -115,13 +134,14 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			border-radius: 5px;
 		}
 	}
 
 	&__modal {
 		width: 100%;
 		max-width: 350px;
-		margin: 30px auto 0;
+		margin: 0 auto;
 
 		@include xs {
 			max-width: fit-content;
@@ -143,6 +163,7 @@
 		display: flex;
 		gap: 30px;
 		align-items: center;
+		width: 100%;
 		padding: 0 0 10px;
 		color: var(--fc-light);
 		background: none;
@@ -178,12 +199,12 @@
 		flex-direction: column;
 		flex-shrink: 0;
 		gap: 5px;
+		align-items: center;
 
 		@include sm {
 			flex-direction: row;
 			grid-column: span 2;
 			gap: 10px;
-			align-items: center;
 		}
 
 		@include xs {
@@ -191,12 +212,13 @@
 		}
 	}
 
-	&__user-name {
+	&__user-name,
+	&__user-date {
 		font-size: 16px;
-		text-align: center;
 	}
 
 	&__user-photo {
+		flex-shrink: 0;
 		width: 100px;
 		height: auto;
 		aspect-ratio: 1/1;

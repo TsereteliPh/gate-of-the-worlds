@@ -119,6 +119,7 @@
 		font-family: var(--font-secondary);
 		text-align: center;
 		text-transform: uppercase;
+		text-decoration: none;
 		border-bottom: 1px solid var(--fc-light);
 
 		@include hg {

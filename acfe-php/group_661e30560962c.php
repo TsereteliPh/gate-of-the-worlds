@@ -212,6 +212,30 @@ acf_add_local_field_group(array(
 					'parent_repeater' => 'field_661e30561dfec',
 				),
 				array(
+					'key' => 'field_661ea266f2328',
+					'label' => 'Дата',
+					'name' => 'date',
+					'aria-label' => '',
+					'type' => 'date_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'display_format' => 'd.m.Y',
+					'return_format' => 'Y-m-d',
+					'first_day' => 1,
+					'placeholder' => '',
+					'min_date' => '',
+					'max_date' => '',
+					'no_weekends' => 0,
+					'acfe_field_group_condition' => 0,
+					'parent_repeater' => 'field_661e30561dfec',
+				),
+				array(
 					'key' => 'field_661e30562cfbd',
 					'label' => '(Column 7/12)',
 					'name' => '',
@@ -331,7 +355,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1713262233,
+	'modified' => 1713283801,
 ));
 
 endif;

@@ -15,7 +15,7 @@
                 $query = new WP_Query([
                     'post_type' => 'courses',
                     'orderby' => 'post_date',
-                    'posts_per_page' => 6,
+                    'posts_per_page' => 8,
                     'paged' => 1
                 ]);
 				$posts = $query->posts;

@@ -176,13 +176,9 @@ iframe {
 	}
 
 	> .faq-links {
-		padding: 220px 0 180px;
+		padding: clamp(5.556rem, -14.389rem + 24.948vw, 12.222rem) 0 180px;
 
 		@include hg {
-			padding: 150px 0 100px;
-		}
-
-		@include sm {
 			padding: 100px 0;
 		}
 
@@ -192,13 +188,9 @@ iframe {
 	}
 
 	> .faq-master {
-		padding: 220px 0 45px;
+		padding: clamp(5.556rem, -14.389rem + 24.948vw, 12.222rem) 0 45px;
 
 		@include hg {
-			padding: 150px 0 40px;
-		}
-
-		@include sm {
 			padding: 100px 0 40px;
 		}
 
