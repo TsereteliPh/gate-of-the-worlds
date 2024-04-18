@@ -150,6 +150,22 @@ function adem_excerpt( $limit, $ID = null ) {
 	return mb_substr( get_the_excerpt( $ID ), 0, $limit ) . '...';
 }
 
+// custom wordpress menu
+add_filter( 'wp_nav_menu_objects', 'adem_wordpress_menu' );
+
+function adem_wordpress_menu( $items ) {
+	foreach ( $items as $item ) {
+		// var_dump( $item->url );
+		// var_dump( strripos( $item->url, '#' ) );
+
+		if ( ! is_front_page() && ( strripos( $item->url, '#' ) !== false ) ) {
+			$item->url = get_home_url() . '/' . $item->url;
+		}
+	}
+
+	return $items;
+}
+
 require 'inc/acf.php';
 require 'inc/load-more.php';
 require 'inc/mail.php';

@@ -484,17 +484,19 @@ document.addEventListener('DOMContentLoaded', function(e) {
 		}
 
 		headerLinks.forEach(link => {
-			link.addEventListener('click', function(evt) {
-				evt.preventDefault();
+			if (link.getAttribute('href').indexOf('#') === 0) {
+				link.addEventListener('click', function(evt) {
+					evt.preventDefault();
 
-				const blockID = link.getAttribute('href').substring(1);
-				document.getElementById(blockID).scrollIntoView({
-					behavior: 'smooth',
-					block: 'center'
+					const blockID = link.getAttribute('href').substring(1);
+					document.getElementById(blockID).scrollIntoView({
+						behavior: 'smooth',
+						block: 'center'
+					})
+
+					if (window.innerWidth <= 768) menuCloser();
 				})
-
-				if (window.innerWidth <= 768) menuCloser();
-			})
+			}
 		});
 
 		headerBurger.addEventListener('click', function() {
