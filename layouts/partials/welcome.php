@@ -15,15 +15,15 @@
 							<div class="welcome__text"><?php echo $welcome['text']; ?></div>
 						<?php endif; ?>
 
-						<form method="POST" class="welcome__form" name="Подбор">
+						<!-- <form method="POST" class="welcome__form" name="Подбор">
 							<input type="tel" class="input welcome__input" name="client_tel" placeholder="Телефон" required>
 
-							<input type="text" class="hidden" name="page_request" value="<?php echo is_archive() ? get_the_archive_title() : get_the_title(); ?>">
+							<input type="text" class="hidden" name="page_request" value="<?php //echo is_archive() ? get_the_archive_title() : get_the_title(); ?>">
 
-							<?php wp_nonce_field( 'Подбор', 'welcome_selection_nonce' ); ?>
+							<?php //wp_nonce_field( 'Подбор', 'welcome_selection_nonce' ); ?>
 
 							<button class="btn welcome__submit" type="submit">Подобрать обучение</button>
-						</form>
+						</form> -->
 					</div>
 
 					<div class="welcome__person">

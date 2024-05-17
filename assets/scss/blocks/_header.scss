@@ -33,7 +33,7 @@
 	}
 
 	&--index {
-		padding: clamp(1.667rem, -5rem + 8.333vw, 3.889rem) 0 0;
+		padding: clamp(1.5rem, 1.038rem + 2.564vw, 3.5rem) 0 0;
 		background: none;
 
 		@include hg {
@@ -72,6 +72,10 @@
 		display: flex;
 		gap: 20px;
 		align-items: center;
+
+		@include md {
+			gap: 15px;
+		}
 
 		@include sm {
 			display: grid;
@@ -174,7 +178,7 @@
 			position: absolute;
 			top: 0;
 			left: 50%;
-			width: clamp(7.778rem, -2.407rem + 50.926vw, 13.889rem);
+			width: clamp(7rem, 5.731rem + 7.051vw, 12.5rem);
 			transform: translate(-50%, 0);
 		}
 
@@ -224,14 +228,18 @@
 				display: block;
 				color: var(--fc-light);
 				font-weight: 700;
-				font-size: 16px;
+				font-size: 0.8889rem;
 				text-transform: uppercase;
 				text-decoration: none;
 				text-shadow: 1px 1px 0 var(--fc-dark);
 				transition: var(--transition);
 
+				@include hg {
+					font-size: 0.7778rem;
+				}
+
 				@include xs {
-					font-size: 14px;
+					font-size: 0.7778rem;
 					text-align: center;
 				}
 			}
@@ -248,7 +256,7 @@
 
 	&__phone {
 		font-weight: 600;
-		font-size: 24px;
+		font-size: 1.3333rem;
 		@include ui-link(var(--secondary));
 
 		@include hg {

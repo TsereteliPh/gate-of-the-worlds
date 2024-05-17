@@ -45,18 +45,18 @@
 
 	&__text {
 		max-width: 80%;
-		font-size: 20px;
+		font-size: 1.1111rem;
 		line-height: 1.4;
 		text-align: center;
 		text-shadow: 1px 1px 0 var(--fc-dark);
 
 		@include sm {
 			max-width: none;
-			font-size: 18px;
+			font-size: 1rem;
 		}
 
 		@include xs {
-			font-size: 16px;
+			font-size: 0.8889rem;
 		}
 	}
 }

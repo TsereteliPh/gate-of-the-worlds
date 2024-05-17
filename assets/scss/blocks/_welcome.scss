@@ -92,7 +92,7 @@
 
 	&__title {
 		margin-bottom: 0;
-		font-size: clamp(1.333rem, 0.821rem + 2.564vw, 3.556rem);
+		font-size: clamp(1.2rem, 0.738rem + 2.564vw, 3.2rem);
 		font-family: var(--font-secondary);
 		text-transform: uppercase;
 
@@ -103,11 +103,11 @@
 
 	&__text {
 		max-width: 550px;
-		font-size: 20px;
+		font-size: 1.1111rem;
 		text-shadow: 1px 1px 0 var(--fc-dark);
 
 		@include hg {
-			font-size: 18px;
+			font-size: 1rem;
 		}
 
 		@include md {
@@ -115,7 +115,7 @@
 		}
 
 		@include xs {
-			font-size: 16px;
+			font-size: 0.8889rem;
 		}
 	}
 
@@ -304,10 +304,10 @@
 
 	&__item-text {
 		color: var(--fc-dark);
-		font-size: 20px;
+		font-size: 1.1111rem;
 
 		@include hg {
-			font-size: 16px;
+			font-size: 0.8889rem;
 		}
 
 		@include xs {

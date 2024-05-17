@@ -12,7 +12,7 @@
 		margin-top: 10px;
 
 		@include xs {
-			font-size: 16px;
+			font-size: 0.8889rem;
 		}
 	}
 
@@ -33,7 +33,7 @@
 		min-height: 55px;
 		padding: 15px 30px;
 		color: var(--primary);
-		font-size: 14px;
+		font-size: 0.7778rem;
 		text-align: center;
 		border: 1px solid var(--primary);
 		border-radius: 10px;

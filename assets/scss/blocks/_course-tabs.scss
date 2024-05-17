@@ -51,10 +51,10 @@
 	}
 
 	&__text {
-		font-size: 20px;
+		font-size: 1.1111rem;
 
 		@include xs {
-			font-size: 16px;
+			font-size: 0.8889rem;
 		}
 	}
 
@@ -81,7 +81,7 @@
 		position: relative;
 		color: var(--fc-light);
 		font-weight: 700;
-		font-size: clamp(1.111rem, 0.957rem + 0.769vw, 1.778rem);
+		font-size: clamp(1rem, 0.862rem + 0.769vw, 1.6rem);
 		font-family: var(--font-secondary);
 		text-transform: uppercase;
 		cursor: pointer;
@@ -180,14 +180,14 @@
 	&__item-title {
 		color: var(--primary);
 		font-weight: 700;
-		font-size: clamp(1.111rem, 1.009rem + 0.513vw, 1.556rem);
+		font-size: clamp(1.4rem, 1.492rem + -0.513vw, 1rem);
 		font-family: var(--font-secondary);
 		text-align: center;
 		text-transform: uppercase;
 	}
 
 	&__item-text {
-		font-size: 15px;
+		font-size: 0.8333rem;
 		line-height: 1.2;
 	}
 
@@ -201,7 +201,7 @@
 		display: flex;
 		gap: 10px;
 		font-weight: 600;
-		font-size: 15px;
+		font-size: 0.8333rem;
 
 		&::before {
 			display: block;

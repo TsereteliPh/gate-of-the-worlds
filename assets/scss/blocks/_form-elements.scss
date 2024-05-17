@@ -4,7 +4,7 @@
 	padding: 20px 30px;
 	color: #000;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 0.7778rem;
 	font-family: var(--font-tertiary);
 	background: var(--bg-primary);
 	border: 2px solid transparent;
@@ -31,7 +31,7 @@
 	display: flex;
 	gap: 15px;
 	font-weight: 400;
-	font-size: 13px;
+	font-size: 0.7222rem;
 
 	@include mouse {
 

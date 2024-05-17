@@ -92,7 +92,7 @@
 		padding: 0 50px;
 		color: var(--fc-light);
 		font-weight: 700;
-		font-size: 28px;
+		font-size: 1.5556rem;
 		font-family: var(--font-secondary);
 		text-align: center;
 		text-transform: uppercase;
@@ -100,12 +100,12 @@
 		@include hg {
 			bottom: 30px;
 			padding: 0 30px;
-			font-size: 24px;
+			font-size: 1.3333rem;
 		}
 
 		@include xs {
 			bottom: 20px;
-			font-size: 20px;
+			font-size: 1.1111rem;
 		}
 	}
 
@@ -144,7 +144,7 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 10px 0;
-		font-size: 15px;
+		font-size: 0.8333rem;
 		border-bottom: 1px solid #d9d9d9;
 
 		&:last-child {

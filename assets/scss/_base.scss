@@ -13,7 +13,7 @@ html,
 body {
 	color: var(--fc-dark);
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 20px;
 	font-family: var(--font-primary);
 	background-color: var(--bg-primary);
 }
@@ -176,7 +176,7 @@ iframe {
 	}
 
 	> .faq-links {
-		padding: clamp(5.556rem, -14.389rem + 24.948vw, 12.222rem) 0 180px;
+		padding: clamp(5rem, 3.615rem + 7.692vw, 11rem) 0 180px;
 
 		@include hg {
 			padding: 100px 0;
@@ -188,7 +188,7 @@ iframe {
 	}
 
 	> .faq-master {
-		padding: clamp(5.556rem, -14.389rem + 24.948vw, 12.222rem) 0 45px;
+		padding: clamp(5rem, 3.615rem + 7.692vw, 11rem) 0 45px;
 
 		@include hg {
 			padding: 100px 0 40px;

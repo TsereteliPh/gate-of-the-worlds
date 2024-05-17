@@ -10,15 +10,15 @@
 	}
 
 	h1 {
-		font-size: clamp(1.333rem, 1.051rem + 1.41vw, 2.556rem);
+		font-size: clamp(1.2rem, 0.946rem + 1.41vw, 2.3rem);
 	}
 
 	h2 {
-		font-size: clamp(1.111rem, 0.855rem + 1.282vw, 2.222rem);
+		font-size: clamp(1rem, 0.769rem + 1.282vw, 2rem);
 	}
 
 	h3 {
-		font-size: clamp(1rem, 0.769rem + 1.154vw, 2rem);
+		font-size: clamp(0.9rem, 0.692rem + 1.154vw, 1.8rem);
 	}
 
 	&__title {
@@ -32,15 +32,15 @@
 	}
 
 	&__text {
-		font-size: 20px;
+		font-size: 1.111rem;
 		line-height: 1.5;
 
 		@include hg {
-			font-size: 18px;
+			font-size: 1rem;
 		}
 
 		@include xs {
-			font-size: 16px;
+			font-size: 0.8889rem;
 		}
 	}
 }

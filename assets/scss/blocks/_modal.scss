@@ -56,17 +56,17 @@
 
 		.modal__label {
 			position: relative;
-			font-size: clamp(1.333rem, 1.128rem + 1.026vw, 2.222rem);
+			font-size: clamp(1.2rem, 1.015rem + 1.026vw, 2rem);
 
 			span {
-				font-size: clamp(1.667rem, 1.231rem + 2.179vw, 3.556rem);
+				font-size: clamp(1.5rem, 1.431rem + 0.385vw, 1.8rem);
 			}
 
 			&::before {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				width: clamp(5.833rem, 5.128rem + 3.526vw, 8.889rem);
+				width: clamp(5.25rem, 4.615rem + 3.526vw, 8rem);
 				height: auto;
 				aspect-ratio: 1/1;
 				background: url(assets/images/logo-main.png) no-repeat 50% / contain;
@@ -105,7 +105,7 @@
 
 	&__label {
 		font-weight: 300;
-		font-size: clamp(1.333rem, 1.231rem + 0.513vw, 1.778rem);
+		font-size: clamp(1.2rem, 1.108rem + 0.513vw, 1.6rem);
 		font-family: var(--font-secondary);
 		text-align: center;
 		text-transform: uppercase;
@@ -113,17 +113,17 @@
 		span {
 			display: block;
 			font-weight: 700;
-			font-size: clamp(1.667rem, 1.538rem + 0.641vw, 2.222rem);
+			font-size: clamp(1.5rem, 1.385rem + 0.641vw, 2rem);
 		}
 	}
 
 	&__text {
 		max-width: 600px;
-		font-size: 16px;
+		font-size: 0.8889rem;
 		text-align: center;
 
 		@include hg {
-			font-size: 14px;
+			font-size: 0.7778rem;
 		}
 	}
 
@@ -184,18 +184,18 @@
 		gap: 5px;
 		align-items: center;
 		font-weight: 400;
-		font-size: 20px;
+		font-size: 1.111rem;
 
 		@include hg {
-			font-size: 14px;
+			font-size: 0.7778rem;
 		}
 
 		span {
 			font-weight: 700;
-			font-size: 24px;
+			font-size: 1.3333rem;
 
 			@include hg {
-				font-size: 18px;
+				font-size: 1rem;
 			}
 		}
 
@@ -203,14 +203,14 @@
 			display: block;
 			margin-top: 10px;
 			font-weight: 700;
-			font-size: 32px;
+			font-size: 1.7778rem;
 			text-decoration: none;
 			background: var(--main-gradient) no-repeat;
 			background-clip: text;
 			-webkit-text-fill-color: transparent;
 
 			@include hg {
-				font-size: 20px;
+				font-size: 1.1111rem;
 			}
 		}
 	}
@@ -225,12 +225,12 @@
 		span {
 			display: block;
 			margin-right: 10px;
-			font-size: 20px;
+			font-size: 1.1111rem;
 			text-align: center;
 
 			@include hg {
 				flex: 1 0 100%;
-				font-size: 16px;
+				font-size: 0.8889rem;
 			}
 		}
 	}
@@ -263,7 +263,7 @@
 		align-items: center;
 		padding: 0;
 		color: var(--fc-light);
-		font-size: 16px;
+		font-size: 0.8889rem;
 		background: none;
 		border: none;
 		transition: var(--transition);

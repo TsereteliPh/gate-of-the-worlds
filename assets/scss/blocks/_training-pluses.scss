@@ -123,21 +123,21 @@
 	&__item-title {
 		color: var(--secondary);
 		font-weight: 700;
-		font-size: 28px;
+		font-size: 1.5556rem;
 		font-family: var(--font-secondary);
 		text-transform: uppercase;
 
 		@include hg {
-			font-size: 24px;
+			font-size: 1.3333rem;
 		}
 
 		@include sm {
-			font-size: 22px;
+			font-size: 1.2222rem;
 			text-align: center;
 		}
 
 		@include xs {
-			font-size: 20px;
+			font-size: 1.1111rem;
 		}
 	}
 
@@ -148,7 +148,7 @@
 		}
 
 		@include xs {
-			font-size: 16px;
+			font-size: 0.8889rem;
 		}
 	}
 

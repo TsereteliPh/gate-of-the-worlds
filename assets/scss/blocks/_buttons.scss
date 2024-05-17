@@ -9,7 +9,7 @@
 	overflow: hidden;
 	color: var(--fc-light);
 	font-weight: 600;
-	font-size: 16px;
+	font-size: 0.8889rem;
 	font-family: var(--font-primary);
 	text-decoration: none;
 	background: var(--btn-gradient) no-repeat left center / 200% auto;
@@ -17,6 +17,10 @@
 	border-radius: 10px;
 	cursor: pointer;
 	transition: var(--transition);
+
+	@include sm {
+		font-size: 0.7778rem;
+	}
 
 	@include touch {
 		box-shadow: 0 3px var(--primary);

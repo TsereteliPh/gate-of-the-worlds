@@ -113,11 +113,11 @@
 	&__item-title {
 		color: var(--secondary);
 		font-weight: 700;
-		font-size: 28px;
+		font-size: 1.5556rem;
 		text-transform: uppercase;
 
 		@include hg {
-			font-size: 24px;
+			font-size: 1.3333rem;
 		}
 
 		@include md {
@@ -125,7 +125,7 @@
 		}
 
 		@include xs {
-			font-size: 20px;
+			font-size: 1.1111rem;
 		}
 	}
 
@@ -148,7 +148,7 @@
 
 		@include hg {
 			gap: 10px;
-			font-size: 16px;
+			font-size: 0.8889rem;
 		}
 
 		&::before {
@@ -166,7 +166,7 @@
 		line-height: 1.4;
 
 		@include hg {
-			font-size: 16px;
+			font-size: 0.8889rem;
 		}
 	}
 
