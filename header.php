@@ -14,6 +14,7 @@
 
 <?php
 	$tel = get_field( 'tel', 'options' );
+	$whatsApp = get_field( 'whatsapp_tel', 'options' );
 	$socials = get_field( 'socials', 'options' );
 ?>
 <header class="header<?php echo ( is_front_page() || is_page( 413 ) || in_array( 413, get_post_ancestors( get_the_ID() ) ) ) ? ' header--index' : ''; ?>">
@@ -50,7 +51,9 @@
 			</div>
 		<?php endif; ?>
 
-		<button class="btn header__callback" type="button" data-fancybox data-src="#callback">Заказать звонок</button>
+		<?php if ( $whatsApp ) : ?>
+			<a href="https://api.whatsapp.com/send?phone=<?php echo preg_replace( '/[^0-9]/', '', $whatsApp ); ?>" class="btn header__callback" target="_blank">Чат WhatsApp</a>
+		<?php endif; ?>
 	</div>
 </header>
 

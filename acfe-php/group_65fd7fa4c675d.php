@@ -28,6 +28,27 @@ acf_add_local_field_group(array(
 			'acfe_field_group_condition' => 0,
 		),
 		array(
+			'key' => 'field_66476addbbffe',
+			'label' => 'Телефон для связи WhatsApp',
+			'name' => 'whatsapp_tel',
+			'aria-label' => '',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'maxlength' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'acfe_field_group_condition' => 0,
+		),
+		array(
 			'key' => 'field_6602a680b4582',
 			'label' => 'Текст в подвале сайта',
 			'name' => 'footer_text',
@@ -241,7 +262,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1711467838,
+	'modified' => 1715956481,
 ));
 
 endif;
