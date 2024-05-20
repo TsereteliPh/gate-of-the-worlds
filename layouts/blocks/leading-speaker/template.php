@@ -43,7 +43,14 @@
                     <div class="leading-speaker__videos-wrapper swiper-wrapper">
                         <?php foreach ( $videos as $video ) : ?>
                             <a href="<?php echo $video[$video['type']]; ?>" class="leading-speaker__link swiper-slide" data-fancybox="speaker-video-gallery-<?php echo $args['block_id']; ?>">
-								<?php echo wp_get_attachment_image( $video['preview'] ? $video['preview'] : 45, 'medium', false ); ?>
+								<?php
+									$is_youtube = strripos( $video['link'], 'youtube' );
+									if ( ( $video['type'] == 'link' ) && ( ! $video['preview'] ) && $is_youtube ) {
+										echo '<img src="https://img.youtube.com/vi/' . substr( strrchr( $video['link'], '=' ), 1 ) . '/0.jpg" loading="lazy" alt="Превью YouTube видео" width="480" height="360">';
+									} else {
+										echo wp_get_attachment_image( $video['preview'] ? $video['preview'] : 45, 'medium', false );
+									}
+								?>
                             </a>
                         <?php endforeach; ?>
                     </div>

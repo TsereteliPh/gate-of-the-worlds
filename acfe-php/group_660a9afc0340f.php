@@ -79,7 +79,7 @@ acf_add_local_field_group(array(
 					'name' => 'preview',
 					'aria-label' => '',
 					'type' => 'image',
-					'instructions' => '',
+					'instructions' => 'Если добавлена YouTube ссылка, превью необязательно.',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
@@ -234,7 +234,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1711971317,
+	'modified' => 1716195308,
 ));
 
 endif;
