@@ -2,6 +2,7 @@
 
 <?php
 	$tel = get_field( 'tel', 'options' );
+	$whatsApp = get_field( 'whatsapp_tel', 'options' );
 	$text = get_field( 'footer_text', 'options' );
 	$socials = get_field( 'socials', 'options' );
 ?>
@@ -58,7 +59,9 @@
 				<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="footer__phone"><?php echo $tel; ?></a>
 			<?php endif; ?>
 
-			<button class="btn footer__callback" type="button" data-fancybox data-src="#callback">Заказать звонок</button>
+			<?php if ( $whatsApp ) : ?>
+			<a href="https://api.whatsapp.com/send?phone=<?php echo preg_replace( '/[^0-9]/', '', $whatsApp ); ?>" class="btn footer__callback" target="_blank">Чат WhatsApp</a>
+		<?php endif; ?>
 
 			<a href="<?php echo get_privacy_policy_url(); ?>" class="footer__policy">Политика конфиденциальности</a>
 		</div>
