@@ -7,7 +7,7 @@
 	$socials = get_field( 'socials', 'options' );
 ?>
 <footer class="footer">
-	<div class="container--small footer__form-container">
+	<!-- <div class="container--small footer__form-container">
 		<div class="footer__label">
 			Остался всего 1 шаг<br>
 			к впечатляющим изменениям<br>
@@ -26,16 +26,16 @@
 			<label class="checkbox footer__form-policy">
 				<input class="checkbox__input" type="checkbox" checked required>
 				<span class="checkbox__switcher"></span>
-				<span class="checkbox__text">Даю согласие на обработку моих персональных данных в соответствии с <a href="<?php echo get_privacy_policy_url(); ?>">Политикой Конфиденциальности</a></span>
+				<span class="checkbox__text">Даю согласие на обработку моих персональных данных в соответствии с <a href="<?php //echo get_privacy_policy_url(); ?>">Политикой Конфиденциальности</a></span>
 			</label>
 
-			<input type="text" class="hidden" name="page_request" value="<?php echo is_archive() ? get_the_archive_title() : get_the_title(); ?>">
+			<input type="text" class="hidden" name="page_request" value="<?php //echo is_archive() ? get_the_archive_title() : get_the_title(); ?>">
 
-			<?php wp_nonce_field( 'Консультация', 'footer_advice_nonce' ); ?>
+			<?php //wp_nonce_field( 'Консультация', 'footer_advice_nonce' ); ?>
 
 			<button class="btn footer__submit" type="submit">Получить консультацию</button>
 		</form>
-	</div>
+	</div> -->
 
 	<div class="footer__info">
 		<div class="container--large footer__container">
