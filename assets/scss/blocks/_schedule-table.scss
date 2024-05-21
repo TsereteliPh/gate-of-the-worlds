@@ -1,0 +1,99 @@
+.schedule-table {
+	margin: 75px 0 30px;
+
+	@include hg {
+		margin: 50px 0 30px;
+	}
+
+	@include xs {
+		margin: 30px 0;
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__table {
+		width: 100%;
+		margin-top: 40px;
+		overflow: hidden;
+		border-radius: 10px;
+		border-collapse: collapse;
+		box-shadow: 0 0 20px 0 rgba(#000, 0.1);
+
+		@include sm {
+			margin-top: 20px;
+		}
+
+		th,
+		td {
+			min-width: 180px;
+			height: 60px;
+			padding: 10px 20px;
+			font-size: 0.8889rem;
+			text-align: center;
+			border: 1px solid #d9d9d9;
+
+			@include md {
+				min-width: 130px;
+				font-size: 0.7778rem;
+			}
+
+			@include sm {
+				min-width: auto;
+				height: 40px;
+				padding: 5px 10px;
+				font-size: 0.6667rem;
+			}
+
+			@include xs {
+				font-size: clamp(0.35rem, -0.4rem + 3.333vw, 0.8rem);
+			}
+		}
+
+		.schedule-table__table-title-cell {
+			color: var(--primary);
+			font-weight: 700;
+		}
+
+		.schedule-table__table-link-cell {
+			padding: 10px;
+
+			@include sm {
+				padding: 5px;
+			}
+		}
+	}
+
+	&__table-head {
+		color: var(--fc-light);
+		background: var(--tertiary);
+	}
+
+	&__table-link {
+		min-width: auto;
+
+		@include sm {
+			min-height: 30px;
+			font-size: 0.6667rem;
+		}
+
+		@include xs {
+			padding: 5px 10px;
+			font-size: clamp(0.35rem, -0.4rem + 3.333vw, 0.8rem);
+		}
+
+		&::before {
+
+			@include sm {
+				width: 100px;
+				height: 100px;
+			}
+
+			@include xs {
+				width: 50px;
+				height: 50px;
+			}
+		}
+	}
+}

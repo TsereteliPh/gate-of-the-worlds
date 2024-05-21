@@ -35,7 +35,7 @@
 		?>
 
 		<?php if ( $tel ) : ?>
-			<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="header__phone">
+			<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="header__phone<?php echo in_array( 413, get_post_ancestors( get_the_ID() ) ) ? ' header__phone--bright' : ''; ?>">
 				<svg width="18" height="18"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-phone"></use></svg>
 				<?php echo $tel; ?>
 			</a>

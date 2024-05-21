@@ -2,18 +2,19 @@
 	position: relative;
 	padding: 75px 0;
 	color: var(--fc-light);
+	background: url(assets/images/main-pattern-bg.jpg) repeat-y top left / 100%;
 	// background: var(--secondary) linear-gradient(to bottom, #171c23 0%, #171c23 40%, rgba(#0c112a, 0) 100%) no-repeat;
 
-	&::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: url(assets/images/main-pattern-bg.jpg) no-repeat 50% / cover;
+	// &::before {
+		// position: absolute;
+		// top: 0;
+		// left: 0;
+		// width: 100%;
+		// height: 100%;
+		// background: url(assets/images/main-pattern-bg.jpg) no-repeat 50% / cover;
 		// opacity: 0.15;
-		content: "";
-	}
+		// content: "";
+	// }
 
 	@include hg {
 		padding: 60px 0;
@@ -159,16 +160,19 @@
 		}
 	}
 
+	&__item {
+		padding-bottom: 15px;
+		border-bottom: 1px solid var(--fc-light);
+	}
+
 	&__button {
 		display: flex;
 		gap: 30px;
 		align-items: center;
 		width: 100%;
-		padding: 0 0 10px;
 		color: var(--fc-light);
 		background: none;
 		border: none;
-		border-bottom: 1px solid var(--fc-light);
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 		-webkit-tap-highlight-color: transparent;
 
