@@ -1,5 +1,5 @@
 <section class="faq-master">
-	<div class="container--large faq-master__container">
+	<div class="container--large">
 		<div class="faq-master__wrapper">
 			<?php
 				$title = get_sub_field( 'title' );

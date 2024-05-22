@@ -17,7 +17,7 @@
 	$whatsApp = get_field( 'whatsapp_tel', 'options' );
 	$socials = get_field( 'socials', 'options' );
 ?>
-<header class="header<?php echo ( is_front_page() || is_page( 413 ) || in_array( 413, get_post_ancestors( get_the_ID() ) ) ) ? ' header--index' : ''; ?>">
+<header class="header<?php echo ( is_front_page() || is_page( 413 ) ) ? ' header--index' : ''; ?>">
 	<div class="container--large header__container">
 		<button class="header__burger" type="button" aria-label="Открыть/Закрыть меню">
 			<span></span>
@@ -35,7 +35,7 @@
 		?>
 
 		<?php if ( $tel ) : ?>
-			<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="header__phone<?php echo in_array( 413, get_post_ancestors( get_the_ID() ) ) ? ' header__phone--bright' : ''; ?>">
+			<a href="tel:<?php echo preg_replace( '/[^0-9,+]/', '', $tel ); ?>" class="header__phone">
 				<svg width="18" height="18"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-phone"></use></svg>
 				<?php echo $tel; ?>
 			</a>
@@ -57,5 +57,5 @@
 	</div>
 </header>
 
-<main class="main<?php echo ( is_front_page() || is_page( 413 ) || in_array( 413, get_post_ancestors( get_the_ID() ) ) ) ? '' : ' main--indent'; ?>">
+<main class="main<?php echo ( is_front_page() || is_page( 413 ) ) ? '' : ' main--indent'; ?>">
 	<?php if ( is_front_page() ) get_template_part('layouts/partials/welcome'); ?>

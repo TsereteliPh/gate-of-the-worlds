@@ -4,13 +4,13 @@
 	color: var(--fc-light);
 	background: #000;
 
-	@include hg {
-		padding-top: 80px;
-	}
+	// @include hg {
+	// 	padding-top: 80px;
+	// }
 
-	@include sm {
-		padding-top: 50px;
-	}
+	// @include sm {
+	// 	padding-top: 50px;
+	// }
 
 	&::before {
 		position: absolute;
@@ -232,6 +232,10 @@
 		font-weight: 600;
 		font-size: 1.3333rem;
 		@include ui-link(var(--fc-light));
+
+		@include hg {
+			font-size: 1.2222rem;
+		}
 
 		@include md {
 			justify-self: end;
