@@ -322,6 +322,13 @@ if (courseTabsCarousel) {
 				769: {
 					slidesPerView: 2
 				}
+			},
+			on: {
+				afterInit: function() {
+					if (this.slides.length === this.params.slidesPerView) {
+						this.pagination.el.style.display = 'none';
+					}
+				}
 			}
 		});
 	});
@@ -345,6 +352,13 @@ if (scheduleCarousel) {
 			},
 			769: {
 				slidesPerView: 2
+			}
+		},
+		on: {
+			afterInit: function() {
+				if (this.slides.length === this.params.slidesPerView) {
+					this.pagination.el.style.display = 'none';
+				}
 			}
 		}
 	});
@@ -370,6 +384,13 @@ if (videos) {
 				769: {
 					slidesPerView: 2
 				}
+			},
+			on: {
+				afterInit: function() {
+					if (this.slides.length === this.params.slidesPerView) {
+						this.pagination.el.style.display = 'none';
+					}
+				}
 			}
 		});
 	});
@@ -387,6 +408,13 @@ if (courseCats && window.innerWidth <= 768) {
 				bulletClass: 'pagination__bullet',
 				bulletActiveClass: 'active',
 				clickable: true
+			},
+			on: {
+				afterInit: function() {
+					if (this.slides.length === this.params.slidesPerView) {
+						this.pagination.el.style.display = 'none';
+					}
+				}
 			}
 		});
 	});
@@ -414,6 +442,13 @@ if (mastersCarousel) {
 			577: {
 				slidesPerView: 2
 			}
+		},
+		on: {
+			afterInit: function() {
+				if (this.slides.length === this.params.slidesPerView) {
+					this.pagination.el.style.display = 'none';
+				}
+			}
 		}
 	});
 }
@@ -429,6 +464,13 @@ if (plusesCarousel && window.innerWidth <= 768) {
 			bulletClass: 'pagination__bullet',
 			bulletActiveClass: 'active',
 			clickable: true
+		},
+		on: {
+			afterInit: function() {
+				if (this.slides.length === this.params.slidesPerView) {
+					this.pagination.el.style.display = 'none';
+				}
+			}
 		}
 	});
 }

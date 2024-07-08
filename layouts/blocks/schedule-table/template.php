@@ -47,7 +47,7 @@
 											<td><?php the_field( 'master' ); ?></td>
 											<td><?php echo $item['type']; ?></td>
 											<td class="schedule-table__table-link-cell">
-												<a href="<?php the_permalink(); ?>" class="btn schedule-table__table-link">Записаться</a>
+												<a href="<?php echo bloginfo( 'url' ) . get_field( 'link' ); ?>" class="btn schedule-table__table-link">Записаться</a>
 											</td>
 										</tr>
 

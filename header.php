@@ -41,15 +41,9 @@
 			</a>
 		<?php endif; ?>
 
-		<?php if ( $socials ) : ?>
-			<div class="socials header__socials">
-				<?php foreach ( $socials as $social ) : ?>
-					<a href="<?php echo $social['link']; ?>" class="socials__link" target="_blank">
-						<svg width="13" height="13"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-<?php echo $social['type']; ?>"></use></svg>
-					</a>
-				<?php endforeach; ?>
-			</div>
-		<?php endif; ?>
+		<a href="<?php echo 'https://vratamirov.com/teach/control'; ?>" class="header__profile">
+			<svg width="18" height="18"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-profile"></use></svg>
+		</a>
 
 		<?php if ( $whatsApp ) : ?>
 			<a href="https://api.whatsapp.com/send?phone=<?php echo preg_replace( '/[^0-9]/', '', $whatsApp ); ?>" class="btn header__callback" target="_blank">Чат WhatsApp</a>
