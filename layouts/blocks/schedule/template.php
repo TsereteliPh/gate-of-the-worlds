@@ -80,15 +80,12 @@
 
 															<div class="schedule__item-content schedule__item-content--price">
 																<?php
-																	echo $item['price']['full'];
-
-																	// ? maybe should be removed
-																	// if ( ! $item['price']['promo'] ) {
-																	// 	echo $item['price']['full'] ? $item['price']['full'] : $item['price']['promo'];
-																	// } else {
-																	// 	echo '<span>' . $item['price']['full'] . '</span>';
-																	// 	echo $item['price']['promo'];
-																	// };
+																	if ( ! $item['price']['promo'] ) {
+																		echo $item['price']['full'] ? $item['price']['full'] : $item['price']['promo'];
+																	} else {
+																		echo '<span>' . $item['price']['full'] . '</span>';
+																		echo $item['price']['promo'];
+																	};
 																?>
 															</div>
 														</li>

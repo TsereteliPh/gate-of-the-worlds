@@ -325,7 +325,7 @@ if (courseTabsCarousel) {
 			},
 			on: {
 				afterInit: function() {
-					if (this.slides.length === this.params.slidesPerView) {
+					if (this.slides.length <= this.params.slidesPerView) {
 						this.pagination.el.style.display = 'none';
 					}
 				}
@@ -356,7 +356,7 @@ if (scheduleCarousel) {
 		},
 		on: {
 			afterInit: function() {
-				if (this.slides.length === this.params.slidesPerView) {
+				if (this.slides.length <= this.params.slidesPerView) {
 					this.pagination.el.style.display = 'none';
 				}
 			}
@@ -387,7 +387,7 @@ if (videos) {
 			},
 			on: {
 				afterInit: function() {
-					if (this.slides.length === this.params.slidesPerView) {
+					if (this.slides.length <= this.params.slidesPerView) {
 						this.pagination.el.style.display = 'none';
 					}
 				}
@@ -411,7 +411,7 @@ if (courseCats && window.innerWidth <= 768) {
 			},
 			on: {
 				afterInit: function() {
-					if (this.slides.length === this.params.slidesPerView) {
+					if (this.slides.length <= this.params.slidesPerView) {
 						this.pagination.el.style.display = 'none';
 					}
 				}
@@ -426,6 +426,7 @@ if (mastersCarousel) {
 	let mastersSwiper = new Swiper(mastersCarousel, {
 		slidesPerView: 1,
 		spaceBetween: 20,
+		centerInsufficientSlides: true,
 		pagination: {
 			el: '.masters-slider__pagination',
 			bulletClass: 'pagination__bullet',
@@ -445,7 +446,7 @@ if (mastersCarousel) {
 		},
 		on: {
 			afterInit: function() {
-				if (this.slides.length === this.params.slidesPerView) {
+				if (this.slides.length <= this.params.slidesPerView) {
 					this.pagination.el.style.display = 'none';
 				}
 			}
@@ -467,7 +468,7 @@ if (plusesCarousel && window.innerWidth <= 768) {
 		},
 		on: {
 			afterInit: function() {
-				if (this.slides.length === this.params.slidesPerView) {
+				if (this.slides.length <= this.params.slidesPerView) {
 					this.pagination.el.style.display = 'none';
 				}
 			}
