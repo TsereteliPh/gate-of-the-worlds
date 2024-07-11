@@ -96,6 +96,7 @@
 		font-family: var(--font-secondary);
 		text-align: center;
 		text-transform: uppercase;
+		text-decoration: none;
 
 		@include hg {
 			bottom: 30px;

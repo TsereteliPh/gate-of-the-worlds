@@ -26,10 +26,14 @@
 						</form> -->
 					</div>
 
-					<div class="welcome__person">
-						<span></span>
+					<div class="welcome__person-wrapper">
+						<div class="welcome__person">
+							<span></span>
 
-						<div class="welcome__person-img" aria-label="Фотография ведущего спикера центра развития - Ольги Веремеевой"></div>
+							<div class="welcome__person-img" aria-label="Фотография ведущего спикера центра развития - Ольги Веремеевой"></div>
+						</div>
+
+						<div class="welcome__person-name">Ольга Михайловна Веремеева</div>
 					</div>
 				</div>
 			</div>

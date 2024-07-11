@@ -52,8 +52,11 @@
 		}
 
 		.schedule-table__table-title-cell {
-			color: var(--primary);
-			font-weight: 700;
+
+			a {
+				font-weight: 700;
+				@include ui-link(var(--primary));
+			}
 		}
 
 		.schedule-table__table-link-cell {

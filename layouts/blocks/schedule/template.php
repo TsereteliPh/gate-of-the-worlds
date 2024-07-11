@@ -45,7 +45,7 @@
 													}
 												?>
 
-												<div class="schedule__item-title"><?php the_title(); ?></div>
+												<a href="<?php bloginfo( 'url' ) . the_field( 'link' ); ?>" class="schedule__item-title"><?php the_title(); ?></a>
 											</div>
 
 											<div class="schedule__item-holder">

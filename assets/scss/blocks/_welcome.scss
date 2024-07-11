@@ -21,7 +21,7 @@
 		@include xs {
 			align-items: flex-start;
 			min-height: auto;
-			padding: 140px 0 40px;
+			padding: 100px 0 40px;
 		}
 
 		&::before {
@@ -166,6 +166,18 @@
 		}
 	}
 
+	&__person-wrapper {
+
+		@include md {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			align-items: center;
+			order: -1;
+			margin: 0 auto;
+		}
+	}
+
 	&__person {
 		display: flex;
 		align-items: center;
@@ -173,12 +185,10 @@
 
 		@include md {
 			position: relative;
-			order: -1;
 			width: 100%;
 			max-width: 140px;
 			height: auto;
 			aspect-ratio: 90/120;
-			margin: 0 auto;
 		}
 
 		@include sm {
@@ -238,6 +248,19 @@
 			background-position: 50% top;
 			background-size: 100% auto;
 			clip-path: inset(0 0 0 0 round 0 0 50% 50%);
+		}
+	}
+
+	&__person-name {
+		display: none;
+
+		@include md {
+			display: block;
+			color: var(--fc-light);
+			font-weight: 700;
+			font-size: clamp(0.9rem, 0.715rem + 1.026vw, 1.7rem);
+			font-family: var(--font-secondary);
+			text-transform: uppercase;
 		}
 	}
 

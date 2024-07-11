@@ -42,7 +42,11 @@
 										?>
 
 										<tr>
-											<td class="schedule-table__table-title-cell"><?php the_title(); ?></td>
+											<td class="schedule-table__table-title-cell">
+												<a href="<?php echo bloginfo( 'url' ) . get_field( 'link' ); ?>">
+													<?php the_title(); ?>
+												</a>
+											</td>
 											<td><?php echo $item['date']; ?></td>
 											<td><?php the_field( 'master' ); ?></td>
 											<td><?php echo $item['type']; ?></td>
