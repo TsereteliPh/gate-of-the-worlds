@@ -47,7 +47,7 @@
 			}
 
 			@include xs {
-				font-size: clamp(0.35rem, -0.4rem + 3.333vw, 0.8rem);
+				font-size: clamp(0.45rem, 0rem + 2.778vw, 0.8rem);
 			}
 		}
 
@@ -82,8 +82,8 @@
 		}
 
 		@include xs {
-			padding: 5px 10px;
-			font-size: clamp(0.35rem, -0.4rem + 3.333vw, 0.8rem);
+			padding: 10px;
+			font-size: clamp(0.45rem, 0rem + 2.778vw, 0.8rem);
 		}
 
 		&::before {

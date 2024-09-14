@@ -28,7 +28,6 @@
 							<th>Семинар</th>
 							<th>Дата</th>
 							<th>Мастер</th>
-							<th>Форма</th>
 							<th>Запись</th>
 						</tr>
 					</thead>
@@ -49,7 +48,6 @@
 											</td>
 											<td><?php echo $item['date']; ?></td>
 											<td><?php the_field( 'master' ); ?></td>
-											<td><?php echo $item['type']; ?></td>
 											<td class="schedule-table__table-link-cell">
 												<a href="<?php echo bloginfo( 'url' ) . get_field( 'link' ); ?>" class="btn schedule-table__table-link">Записаться</a>
 											</td>
