@@ -1,0 +1,61 @@
+.blog-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: center;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(#000, 0.1);
+	transition: var(--transition);
+
+	&:has(a[href]) {
+
+		@include mouse {
+
+			&:hover {
+				transform: translateY(-5px);
+			}
+		}
+	}
+
+	&__img {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16/9;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__link {
+		padding: 0 35px 40px;
+		color: var(--secondary);
+		font-weight: 700;
+		font-size: 1.3333rem;
+		font-family: var(--font-secondary);
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		@include hg {
+			font-size: 1.2222rem;
+		}
+
+		@include md {
+			padding: 0 20px 30px;
+		}
+
+		&::before {
+			position: absolute;
+			inset: 0;
+			content: "";
+		}
+	}
+}

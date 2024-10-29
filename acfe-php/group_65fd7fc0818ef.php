@@ -54,6 +54,56 @@ acf_add_local_field_group(array(
 				'acfe_flexible_grid_wrap' => false,
 			),
 			'layouts' => array(
+				'layout_6720b3e33a733' => array(
+					'key' => 'layout_6720b3e33a733',
+					'name' => 'blog',
+					'label' => 'Блог',
+					'display' => 'block',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_6720b3ed3a736',
+							'label' => '',
+							'name' => '',
+							'aria-label' => '',
+							'type' => 'clone',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'clone' => array(
+								0 => 'group_6720b3bc510a7',
+							),
+							'display' => 'seamless',
+							'layout' => 'block',
+							'prefix_label' => 0,
+							'prefix_name' => 0,
+							'acfe_field_group_condition' => 0,
+							'acfe_seamless_style' => 0,
+							'acfe_clone_modal' => 0,
+							'acfe_clone_modal_close' => 0,
+							'acfe_clone_modal_button' => '',
+							'acfe_clone_modal_size' => 'large',
+						),
+					),
+					'min' => '',
+					'max' => '',
+					'acfe_flexible_thumbnail' => '',
+					'acfe_flexible_render_template' => false,
+					'acfe_flexible_render_style' => false,
+					'acfe_flexible_render_script' => false,
+					'acfe_flexible_settings' => false,
+					'acfe_flexible_settings_size' => 'medium',
+					'acfe_layout_locations' => array(
+					),
+					'acfe_flexible_modal_edit_size' => false,
+					'acfe_flexible_category' => false,
+					'acfe_layout_col' => 'auto',
+					'acfe_layout_allowed_col' => false,
+				),
 				'layout_6605845cfaf41' => array(
 					'key' => 'layout_6605845cfaf41',
 					'name' => 'leading-speaker',
@@ -1052,7 +1102,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1716301195,
+	'modified' => 1730196472,
 ));
 
 endif;

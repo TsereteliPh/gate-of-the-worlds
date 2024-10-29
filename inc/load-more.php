@@ -15,6 +15,10 @@ function load_more() {
 				$return_html .= get_template_part('layouts/partials/cards/course-card', null, array(
 					'class' => 'course-item'
 				));
+			} else if ( $args['cat'] == 3 ) {
+				$return_html .= get_template_part('layouts/partials/cards/blog-card', null, array(
+					'class' => 'blog__item'
+				));
 			}
 		}
 		wp_reset_postdata();
