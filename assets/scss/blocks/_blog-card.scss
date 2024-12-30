@@ -2,7 +2,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
+	gap: 10px;
 	align-items: center;
 	overflow: hidden;
 	border-radius: 10px;
@@ -35,7 +35,8 @@
 	}
 
 	&__link {
-		padding: 0 35px 40px;
+		margin-top: 20px;
+		padding: 0 35px;
 		color: var(--secondary);
 		font-weight: 700;
 		font-size: 1.3333rem;
@@ -57,5 +58,11 @@
 			inset: 0;
 			content: "";
 		}
+	}
+
+	&__tags {
+		padding: 0 35px 40px;
+		font-size: 0.85rem;
+		text-align: center;
 	}
 }

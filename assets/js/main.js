@@ -216,6 +216,46 @@ function tabs() {
 	}
 }
 
+function tagTabs() {
+	const tagTabs = document.querySelector('.js-tag-tabs');
+
+	if (!tagTabs) return;
+
+	const items = tagTabs.querySelectorAll('li');
+	const posts = document.querySelectorAll('li[data-tags]');
+
+	tagTabs.addEventListener('click', function (evt) {
+		const target = evt.target.closest('[data-slug]');
+        if (!target) return;
+
+		for (const item of items) {
+			item.classList.remove('active');
+		}
+
+		target.classList.add('active');
+
+        const tag = target.getAttribute('data-slug');
+
+        posts.forEach(post => {
+            const postTags = post.dataset.tags;
+
+			if (postTags.includes(tag) || tag === 'all') {
+				post.classList.remove('hidden');
+			} else {
+				post.classList.add('hidden');
+			}
+        });
+	});
+
+	const searchParams = new URLSearchParams(window.location.search);
+	const tagParam = searchParams.get('tag');
+	if (tagParam) {
+        const tagItem = tagTabs.querySelector(`[data-slug="${tagParam}"]`);
+		console.log(tagItem);
+        if (tagItem) tagItem.click();
+    }
+}
+
 //Ajax
 
 function showMorePosts() {
@@ -262,6 +302,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	sendForm();
 
 	setTelMask();
+
+	tagTabs();
 
 	tabs();
 

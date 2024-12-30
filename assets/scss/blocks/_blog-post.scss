@@ -1,0 +1,43 @@
+.blog-post {
+	margin: 60px 0 40px;
+
+	@include hg {
+		margin: 40px 0;
+	}
+
+	@include xs {
+		margin: 30px 0;
+	}
+
+	&__small-tags {
+		margin-top: 40px;
+		font-size: 0.8rem;
+
+		@include md {
+			margin-top: 20px;
+		}
+
+		@include xs {
+			font-size: 0.6222rem;
+		}
+	}
+
+	&__title {
+		color: var(--fc-dark);
+	}
+
+	&__text {
+		margin-top: 40px;
+		font-size: 0.8889rem;
+		line-height: 1.5;
+
+		@include md {
+			margin-top: 20px;
+		}
+
+		@include xs {
+			font-size: 0.7333rem;
+			line-height: 1.3;
+		}
+	}
+}

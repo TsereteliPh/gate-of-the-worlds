@@ -166,11 +166,15 @@ iframe {
 	&--indent {
 		margin-top: 115px;
 
-		@include lg {
-			margin-top: 105px;
+		@include md {
+			margin-top: 100px;
 		}
 
 		@include sm {
+			margin-top: 115px;
+		}
+
+		@include xs {
 			margin-top: 100px;
 		}
 	}

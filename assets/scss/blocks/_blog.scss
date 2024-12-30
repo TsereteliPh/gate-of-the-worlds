@@ -1,9 +1,5 @@
 .blog {
-	margin: 80px 0 60px;
-
-	@include hg {
-		margin: 60px 0 40px;
-	}
+	margin: 40px 0;
 
 	@include xs {
 		margin: 30px 0;
@@ -22,18 +18,26 @@
 	}
 
 	&__title {
-		color: var(--secondary);
 		text-align: center;
+	}
+
+	&__tags {
+		margin-top: 40px;
+
+		@include xs {
+			margin-top: 20px;
+		}
 	}
 
 	&__list {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 40px 20px;
-		margin-top: 40px;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 70px;
+		margin-top: 55px;
 
-		@include lg {
-			grid-template-columns: repeat(3, 1fr);
+		@include hg {
+			gap: 40px;
+			margin-top: 40px;
 		}
 
 		@include md {
@@ -44,6 +48,13 @@
 		@include xs {
 			grid-template-columns: 1fr;
 			margin-top: 20px;
+		}
+	}
+
+	&__item {
+
+		&.hidden {
+			display: none;
 		}
 	}
 
